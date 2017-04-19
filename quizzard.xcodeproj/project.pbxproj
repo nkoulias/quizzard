@@ -7,20 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8408B4081E8D1A2F008AC8AE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8408B4071E8D1A2F008AC8AE /* GameScene.sks */; };
+		841CA2F21EA7095D00C2ACBD /* angry_teacher.png in Resources */ = {isa = PBXBuildFile; fileRef = 841CA2F11EA7095D00C2ACBD /* angry_teacher.png */; };
+		84334F641EA37D8300609913 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F5E1EA37D8300609913 /* bg.png */; };
+		84334F651EA37D8300609913 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F5F1EA37D8300609913 /* play_button.png */; };
+		84334F661EA37D8300609913 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F601EA37D8300609913 /* title.png */; };
+		84334F671EA37D8300609913 /* text.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F611EA37D8300609913 /* text.png */; };
+		84334F681EA37D8300609913 /* menu_bar_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F621EA37D8300609913 /* menu_bar_bottom.png */; };
+		84334F691EA37D8300609913 /* monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F631EA37D8300609913 /* monster.png */; };
+		84334F6B1EA385F500609913 /* intro_character.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F6A1EA385F500609913 /* intro_character.png */; };
+		84334F6D1EA3884B00609913 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 84334F6C1EA3884B00609913 /* AppIcon.appiconset */; };
+		8484C8BB1EA700C2003117CE /* green_monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BA1EA700C2003117CE /* green_monster.png */; };
+		8484C8BD1EA700D2003117CE /* single_eye_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BC1EA700D2003117CE /* single_eye_green.png */; };
+		8484C8BF1EA700E0003117CE /* monocle.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BE1EA700E0003117CE /* monocle.png */; };
+		8484C8C11EA700EF003117CE /* octopus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8C01EA700EF003117CE /* octopus.png */; };
+		8484C8C31EA700FD003117CE /* party_animal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8C21EA700FD003117CE /* party_animal.png */; };
+		8484C8C51EA7010E003117CE /* purple_cutey.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8C41EA7010E003117CE /* purple_cutey.png */; };
+		8484C8C91EA70184003117CE /* CharacterSelect.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8C81EA70184003117CE /* CharacterSelect.sks */; };
+		8484C8CB1EA70213003117CE /* class_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8CA1EA70213003117CE /* class_bg.png */; };
 		849E0D9B1E8D162E00BDDC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E0D9A1E8D162E00BDDC0A /* AppDelegate.swift */; };
-		849E0D9D1E8D162E00BDDC0A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 849E0D9C1E8D162E00BDDC0A /* GameScene.sks */; };
 		849E0D9F1E8D162E00BDDC0A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 849E0D9E1E8D162E00BDDC0A /* Actions.sks */; };
 		849E0DA11E8D162E00BDDC0A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E0DA01E8D162E00BDDC0A /* GameScene.swift */; };
 		849E0DA31E8D162E00BDDC0A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E0DA21E8D162E00BDDC0A /* GameViewController.swift */; };
 		849E0DA61E8D162E00BDDC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E0DA41E8D162E00BDDC0A /* Main.storyboard */; };
 		849E0DA81E8D162E00BDDC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849E0DA71E8D162E00BDDC0A /* Assets.xcassets */; };
 		849E0DAB1E8D162E00BDDC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E0DA91E8D162E00BDDC0A /* LaunchScreen.storyboard */; };
+		84D083651EA23CFF0030A66A /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84D083641EA23CFF0030A66A /* MainMenu.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8408B4071E8D1A2F008AC8AE /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		841CA2F11EA7095D00C2ACBD /* angry_teacher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = angry_teacher.png; path = ../angry_teacher.png; sourceTree = "<group>"; };
+		84334F5E1EA37D8300609913 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		84334F5F1EA37D8300609913 /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button.png; sourceTree = "<group>"; };
+		84334F601EA37D8300609913 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		84334F611EA37D8300609913 /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text.png; sourceTree = "<group>"; };
+		84334F621EA37D8300609913 /* menu_bar_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_bar_bottom.png; sourceTree = "<group>"; };
+		84334F631EA37D8300609913 /* monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster.png; sourceTree = "<group>"; };
+		84334F6A1EA385F500609913 /* intro_character.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro_character.png; sourceTree = "<group>"; };
+		84334F6C1EA3884B00609913 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
+		8484C8BA1EA700C2003117CE /* green_monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_monster.png; sourceTree = "<group>"; };
+		8484C8BC1EA700D2003117CE /* single_eye_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = single_eye_green.png; sourceTree = "<group>"; };
+		8484C8BE1EA700E0003117CE /* monocle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monocle.png; sourceTree = "<group>"; };
+		8484C8C01EA700EF003117CE /* octopus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = octopus.png; sourceTree = "<group>"; };
+		8484C8C21EA700FD003117CE /* party_animal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = party_animal.png; sourceTree = "<group>"; };
+		8484C8C41EA7010E003117CE /* purple_cutey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple_cutey.png; sourceTree = "<group>"; };
+		8484C8C81EA70184003117CE /* CharacterSelect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CharacterSelect.sks; sourceTree = "<group>"; };
+		8484C8CA1EA70213003117CE /* class_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = class_bg.png; path = ../class_bg.png; sourceTree = "<group>"; };
 		849E0D971E8D162E00BDDC0A /* quizzard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quizzard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849E0D9A1E8D162E00BDDC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		849E0D9C1E8D162E00BDDC0A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		849E0D9E1E8D162E00BDDC0A /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		849E0DA01E8D162E00BDDC0A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		849E0DA21E8D162E00BDDC0A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +63,7 @@
 		849E0DA71E8D162E00BDDC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		849E0DAA1E8D162E00BDDC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		849E0DAC1E8D162E00BDDC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D083641EA23CFF0030A66A /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +96,9 @@
 		849E0D991E8D162E00BDDC0A /* quizzard */ = {
 			isa = PBXGroup;
 			children = (
+				84D083631EA23CB40030A66A /* Scenes */,
+				849E0DB21E8D16B600BDDC0A /* Assets */,
 				849E0D9A1E8D162E00BDDC0A /* AppDelegate.swift */,
-				849E0D9C1E8D162E00BDDC0A /* GameScene.sks */,
 				849E0D9E1E8D162E00BDDC0A /* Actions.sks */,
 				849E0DA01E8D162E00BDDC0A /* GameScene.swift */,
 				849E0DA21E8D162E00BDDC0A /* GameViewController.swift */,
@@ -71,6 +108,39 @@
 				849E0DAC1E8D162E00BDDC0A /* Info.plist */,
 			);
 			path = quizzard;
+			sourceTree = "<group>";
+		};
+		849E0DB21E8D16B600BDDC0A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8484C8CA1EA70213003117CE /* class_bg.png */,
+				841CA2F11EA7095D00C2ACBD /* angry_teacher.png */,
+				8484C8C41EA7010E003117CE /* purple_cutey.png */,
+				8484C8C21EA700FD003117CE /* party_animal.png */,
+				8484C8C01EA700EF003117CE /* octopus.png */,
+				8484C8BE1EA700E0003117CE /* monocle.png */,
+				8484C8BC1EA700D2003117CE /* single_eye_green.png */,
+				8484C8BA1EA700C2003117CE /* green_monster.png */,
+				84334F6C1EA3884B00609913 /* AppIcon.appiconset */,
+				84334F5E1EA37D8300609913 /* bg.png */,
+				84334F5F1EA37D8300609913 /* play_button.png */,
+				84334F601EA37D8300609913 /* title.png */,
+				84334F611EA37D8300609913 /* text.png */,
+				84334F621EA37D8300609913 /* menu_bar_bottom.png */,
+				84334F631EA37D8300609913 /* monster.png */,
+				84334F6A1EA385F500609913 /* intro_character.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		84D083631EA23CB40030A66A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8484C8C81EA70184003117CE /* CharacterSelect.sks */,
+				8408B4071E8D1A2F008AC8AE /* GameScene.sks */,
+				84D083641EA23CFF0030A66A /* MainMenu.sks */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,11 +203,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D083651EA23CFF0030A66A /* MainMenu.sks in Resources */,
+				841CA2F21EA7095D00C2ACBD /* angry_teacher.png in Resources */,
+				8408B4081E8D1A2F008AC8AE /* GameScene.sks in Resources */,
+				84334F691EA37D8300609913 /* monster.png in Resources */,
+				8484C8C51EA7010E003117CE /* purple_cutey.png in Resources */,
+				84334F6B1EA385F500609913 /* intro_character.png in Resources */,
+				84334F6D1EA3884B00609913 /* AppIcon.appiconset in Resources */,
+				8484C8CB1EA70213003117CE /* class_bg.png in Resources */,
 				849E0DA61E8D162E00BDDC0A /* Main.storyboard in Resources */,
-				849E0D9D1E8D162E00BDDC0A /* GameScene.sks in Resources */,
+				8484C8BF1EA700E0003117CE /* monocle.png in Resources */,
+				84334F681EA37D8300609913 /* menu_bar_bottom.png in Resources */,
+				8484C8BD1EA700D2003117CE /* single_eye_green.png in Resources */,
+				84334F651EA37D8300609913 /* play_button.png in Resources */,
 				849E0DA81E8D162E00BDDC0A /* Assets.xcassets in Resources */,
+				8484C8BB1EA700C2003117CE /* green_monster.png in Resources */,
+				84334F641EA37D8300609913 /* bg.png in Resources */,
+				84334F671EA37D8300609913 /* text.png in Resources */,
 				849E0DAB1E8D162E00BDDC0A /* LaunchScreen.storyboard in Resources */,
 				849E0D9F1E8D162E00BDDC0A /* Actions.sks in Resources */,
+				8484C8C11EA700EF003117CE /* octopus.png in Resources */,
+				8484C8C31EA700FD003117CE /* party_animal.png in Resources */,
+				84334F661EA37D8300609913 /* title.png in Resources */,
+				8484C8C91EA70184003117CE /* CharacterSelect.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = NBWLYKYCV6;
 				INFOPLIST_FILE = quizzard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -286,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = NBWLYKYCV6;
 				INFOPLIST_FILE = quizzard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -314,6 +404,7 @@
 				849E0DB11E8D162E00BDDC0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
