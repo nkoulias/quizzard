@@ -22,6 +22,7 @@ class GameplayScene: SKScene {
         
         for touch in touches {
             let location = touch.location(in: self)
+            //Start spinning the wheel
             if atPoint(location).name == "play_button" {
                 let random = GKRandomDistribution(lowestValue: 20, highestValue: 90)
                 let r = random.nextInt()
@@ -32,6 +33,8 @@ class GameplayScene: SKScene {
                 player?.physicsBody?.pinned = true
                 player?.physicsBody?.angularVelocity = CGFloat(r)
                 player?.physicsBody?.angularDamping = 1.0
+                
+                //Click back button
             } else if atPoint(location).name == "back_button" {
                 let play_scene = CharacterSelectScene(fileNamed: "CharacterSelect")
                 play_scene?.scaleMode = .aspectFill
@@ -44,7 +47,7 @@ class GameplayScene: SKScene {
     
     }
     override func didSimulatePhysics() {
-        
+        //Wait for wheel to stop spinning before navigating to question scene
         let speed = player?.physicsBody?.angularVelocity
         if (speed != nil) {
             if (speed! <= CGFloat(0.01)){
