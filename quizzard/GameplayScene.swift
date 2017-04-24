@@ -9,20 +9,13 @@
 import SpriteKit
 import GameplayKit
 
-class GameplayScene: SKScene, SKSceneDelegate {
-    
+class GameplayScene: SKScene {
     
     var player: Player?
     
-    
     override func didMove(to view: SKView) {
-            self.delegate = self
-                player = self.childNode(withName: "spinner") as! Player?;
-    }
-    
-    func getLabels() {
-        GameplayController.instance.scoreText = self.childNode(withName: "score") as? SKLabelNode!
-        GameplayController.instance.lifeText = self.childNode(withName: "lives") as? SKLabelNode!
+        player = self.childNode(withName: "spinner") as! Player?;
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -30,31 +23,30 @@ class GameplayScene: SKScene, SKSceneDelegate {
         for touch in touches {
             let location = touch.location(in: self)
             if atPoint(location).name == "play_button" {
-                spin()
+                let random = GKRandomDistribution(lowestValue: 20, highestValue: 90)
+                let r = random.nextInt()
+                player?.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(self.frame.width))
+                player?.physicsBody?.affectedByGravity = false
+                player?.physicsBody?.isDynamic = true
+                player?.physicsBody?.allowsRotation = true
+                player?.physicsBody?.pinned = true
+                player?.physicsBody?.angularVelocity = CGFloat(r)
+                player?.physicsBody?.angularDamping = 1.0
             }
         }
     }
-    func spin () {
-        let random = GKRandomDistribution(lowestValue: 20, highestValue: 90)
-        let r = random.nextInt()
-        player?.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(self.frame.width))
-        player?.physicsBody?.affectedByGravity = false
-        player?.physicsBody?.isDynamic = true
-        player?.physicsBody?.allowsRotation = true
-        player?.physicsBody?.pinned = true
-        player?.physicsBody?.angularVelocity = CGFloat(r)
-        player?.physicsBody?.angularDamping = 1.0
-        
-        
-    }
-    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     
     }
     override func didSimulatePhysics() {
-       print("\(String(describing: player?.physicsBody?.angularVelocity))")
-        if ((player?.physicsBody?.angularVelocity)! <= CGFloat(0.001)) {
-            print("G")
+        
+        let speed = player?.physicsBody?.angularVelocity
+        if (speed != nil) {
+            if (speed! <= CGFloat(0.01)){
+                let play_scene = Questions(fileNamed: "QuestionScene")
+                play_scene?.scaleMode = .aspectFill
+                self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+            }
         }
     }
 }
