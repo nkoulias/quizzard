@@ -23,10 +23,10 @@ class GameplayController {
         if GameManager.instance.gameStartedFromMainMenu {
             GameManager.instance.gameStartedFromMainMenu = false
             
-            score = 0
-            life = 3
-            scoreText?.text = "\(String(describing: score))"
-            lifeText?.text = "\(String(describing: life))"
+   //         score = 0
+     //       life = 3
+       //     scoreText?.text = "\(String(describing: score))"
+         //   lifeText?.text = "\(String(describing: life))"
             
         }
         

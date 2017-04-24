@@ -9,12 +9,15 @@
 import SpriteKit
 import GameplayKit
 
-class GameplayScene: SKScene {
+class GameplayScene: SKScene, SKSceneDelegate {
     
-    var player: Player?;
+    
+    var player: Player?
+    
     
     override func didMove(to view: SKView) {
-        player = self.childNode(withName: "spinner") as! Player?;
+            self.delegate = self
+                player = self.childNode(withName: "spinner") as! Player?;
     }
     
     func getLabels() {
@@ -23,28 +26,35 @@ class GameplayScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        let random = GKRandomDistribution(lowestValue: 20, highestValue: 90)
-        let r = random.nextInt()
         
         for touch in touches {
             let location = touch.location(in: self)
             if atPoint(location).name == "play_button" {
-                player?.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(self.frame.width))
-                player?.physicsBody?.affectedByGravity = false
-                player?.physicsBody?.isDynamic = true
-                player?.physicsBody?.allowsRotation = true
-                player?.physicsBody?.angularVelocity = CGFloat(r)
-                player?.physicsBody?.angularDamping = 1.0
-                
+                spin()
             }
         }
-
+    }
+    func spin () {
+        let random = GKRandomDistribution(lowestValue: 20, highestValue: 90)
+        let r = random.nextInt()
+        player?.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(self.frame.width))
+        player?.physicsBody?.affectedByGravity = false
+        player?.physicsBody?.isDynamic = true
+        player?.physicsBody?.allowsRotation = true
+        player?.physicsBody?.pinned = true
+        player?.physicsBody?.angularVelocity = CGFloat(r)
+        player?.physicsBody?.angularDamping = 1.0
         
- }
+        
+    }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-
+    
+    }
+    override func didSimulatePhysics() {
+       print("\(String(describing: player?.physicsBody?.angularVelocity))")
+        if ((player?.physicsBody?.angularVelocity)! <= CGFloat(0.001)) {
+            print("G")
+        }
     }
 }
