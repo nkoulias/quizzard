@@ -32,7 +32,12 @@ class GameplayScene: SKScene {
                 player?.physicsBody?.pinned = true
                 player?.physicsBody?.angularVelocity = CGFloat(r)
                 player?.physicsBody?.angularDamping = 1.0
+            } else if atPoint(location).name == "back_button" {
+                let play_scene = CharacterSelectScene(fileNamed: "CharacterSelect")
+                play_scene?.scaleMode = .aspectFill
+                self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
             }
+
         }
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
