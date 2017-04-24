@@ -6,9 +6,8 @@
 //  Copyright © 2017 Nick Koulias. All rights reserved.
 //
 
-import UIKit
 import SpriteKit
-import GameplayKit
+//import GameplayKit
 
 class GameViewController: UIViewController {
 
@@ -17,7 +16,7 @@ class GameViewController: UIViewController {
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            if let scene = GameplayScene(fileNamed: "Spin") {
+            if let scene = MainMenuScene(fileNamed: "MainMenu") {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
                 
@@ -27,7 +26,7 @@ class GameViewController: UIViewController {
             
             view.ignoresSiblingOrder = true
             
-            view.showsFPS = true
+            view.showsFPS = false
             view.showsNodeCount = false
         }
     }

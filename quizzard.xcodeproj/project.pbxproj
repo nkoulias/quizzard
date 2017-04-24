@@ -14,6 +14,8 @@
 		841C06C71EA717B400C9BB54 /* spin_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C06C61EA717B400C9BB54 /* spin_button.png */; };
 		841C06C91EA7185E00C9BB54 /* question_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C06C81EA7185E00C9BB54 /* question_box.png */; };
 		841CA2F21EA7095D00C2ACBD /* angry_teacher.png in Resources */ = {isa = PBXBuildFile; fileRef = 841CA2F11EA7095D00C2ACBD /* angry_teacher.png */; };
+		841D56B01EACD83600BF5830 /* GameplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D56AF1EACD83600BF5830 /* GameplayController.swift */; };
+		841D56B21EACDC8700BF5830 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D56B11EACDC8700BF5830 /* GameManager.swift */; };
 		8428D7D91EA8EA7A00B4141D /* selection_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 8428D7D11EA8EA7A00B4141D /* selection_pin.png */; };
 		8428D7DB1EA8EA7A00B4141D /* Science.png in Resources */ = {isa = PBXBuildFile; fileRef = 8428D7D31EA8EA7A00B4141D /* Science.png */; };
 		8428D7DC1EA8EA7A00B4141D /* outer_oval.png in Resources */ = {isa = PBXBuildFile; fileRef = 8428D7D41EA8EA7A00B4141D /* outer_oval.png */; };
@@ -30,6 +32,8 @@
 		84334F691EA37D8300609913 /* monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F631EA37D8300609913 /* monster.png */; };
 		84334F6B1EA385F500609913 /* intro_character.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F6A1EA385F500609913 /* intro_character.png */; };
 		84334F6D1EA3884B00609913 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 84334F6C1EA3884B00609913 /* AppIcon.appiconset */; };
+		8434A8081EA9D4D40007E6CE /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434A8071EA9D4D40007E6CE /* MainMenuScene.swift */; };
+		8446C1E61EAD89950008042A /* CharacterSelectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446C1E51EAD89950008042A /* CharacterSelectScene.swift */; };
 		8484C8BB1EA700C2003117CE /* green_monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BA1EA700C2003117CE /* green_monster.png */; };
 		8484C8BD1EA700D2003117CE /* single_eye_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BC1EA700D2003117CE /* single_eye_green.png */; };
 		8484C8BF1EA700E0003117CE /* monocle.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BE1EA700E0003117CE /* monocle.png */; };
@@ -45,6 +49,7 @@
 		849E0DA61E8D162E00BDDC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E0DA41E8D162E00BDDC0A /* Main.storyboard */; };
 		849E0DA81E8D162E00BDDC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849E0DA71E8D162E00BDDC0A /* Assets.xcassets */; };
 		849E0DAB1E8D162E00BDDC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E0DA91E8D162E00BDDC0A /* LaunchScreen.storyboard */; };
+		84ABD21F1EAA3C7B006374A8 /* blow.normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84ABD21E1EAA3C7B006374A8 /* blow.normal.ttf */; };
 		84B2CE761EA8F78000C00BDE /* Spin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84B2CE751EA8F78000C00BDE /* Spin.sks */; };
 		84B2CE781EA8F80D00C00BDE /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B2CE771EA8F80D00C00BDE /* pin.png */; };
 		84C334421EA734D500BCD95B /* lives.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C334411EA734D500BCD95B /* lives.png */; };
@@ -61,6 +66,8 @@
 		841C06C61EA717B400C9BB54 /* spin_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spin_button.png; path = ../spin_button.png; sourceTree = "<group>"; };
 		841C06C81EA7185E00C9BB54 /* question_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = question_box.png; path = ../question_box.png; sourceTree = "<group>"; };
 		841CA2F11EA7095D00C2ACBD /* angry_teacher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = angry_teacher.png; path = ../angry_teacher.png; sourceTree = "<group>"; };
+		841D56AF1EACD83600BF5830 /* GameplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayController.swift; sourceTree = "<group>"; };
+		841D56B11EACDC8700BF5830 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		8428D7D11EA8EA7A00B4141D /* selection_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selection_pin.png; sourceTree = "<group>"; };
 		8428D7D31EA8EA7A00B4141D /* Science.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Science.png; sourceTree = "<group>"; };
 		8428D7D41EA8EA7A00B4141D /* outer_oval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outer_oval.png; sourceTree = "<group>"; };
@@ -77,6 +84,8 @@
 		84334F631EA37D8300609913 /* monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster.png; sourceTree = "<group>"; };
 		84334F6A1EA385F500609913 /* intro_character.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro_character.png; sourceTree = "<group>"; };
 		84334F6C1EA3884B00609913 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
+		8434A8071EA9D4D40007E6CE /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		8446C1E51EAD89950008042A /* CharacterSelectScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSelectScene.swift; sourceTree = "<group>"; };
 		8484C8BA1EA700C2003117CE /* green_monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_monster.png; sourceTree = "<group>"; };
 		8484C8BC1EA700D2003117CE /* single_eye_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = single_eye_green.png; sourceTree = "<group>"; };
 		8484C8BE1EA700E0003117CE /* monocle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monocle.png; sourceTree = "<group>"; };
@@ -94,6 +103,7 @@
 		849E0DA71E8D162E00BDDC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		849E0DAA1E8D162E00BDDC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		849E0DAC1E8D162E00BDDC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84ABD21E1EAA3C7B006374A8 /* blow.normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blow.normal.ttf; sourceTree = "<group>"; };
 		84B2CE751EA8F78000C00BDE /* Spin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Spin.sks; path = ../Spin.sks; sourceTree = "<group>"; };
 		84B2CE771EA8F80D00C00BDE /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		84C334411EA734D500BCD95B /* lives.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lives.png; sourceTree = "<group>"; };
@@ -116,6 +126,7 @@
 		8409AF771EA77AE2005B1A60 /* Game Classes */ = {
 			isa = PBXGroup;
 			children = (
+				841D56AE1EACD6DA00BF5830 /* Game Controllers and Managers */,
 				8409AF7B1EA77EFA005B1A60 /* Player Class */,
 				8409AF781EA77AF5005B1A60 /* Scene Classes */,
 			);
@@ -127,6 +138,8 @@
 			children = (
 				849E0DA01E8D162E00BDDC0A /* GameScene.swift */,
 				8409AF791EA77B2A005B1A60 /* GameplayScene.swift */,
+				8434A8071EA9D4D40007E6CE /* MainMenuScene.swift */,
+				8446C1E51EAD89950008042A /* CharacterSelectScene.swift */,
 			);
 			name = "Scene Classes";
 			sourceTree = "<group>";
@@ -137,6 +150,15 @@
 				8409AF7C1EA77F08005B1A60 /* Player.swift */,
 			);
 			name = "Player Class";
+			sourceTree = "<group>";
+		};
+		841D56AE1EACD6DA00BF5830 /* Game Controllers and Managers */ = {
+			isa = PBXGroup;
+			children = (
+				841D56AF1EACD83600BF5830 /* GameplayController.swift */,
+				841D56B11EACDC8700BF5830 /* GameManager.swift */,
+			);
+			name = "Game Controllers and Managers";
 			sourceTree = "<group>";
 		};
 		8428D7D01EA8EA4D00B4141D /* Play Assets */ = {
@@ -191,6 +213,7 @@
 		849E0DB21E8D16B600BDDC0A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				84ABD21D1EAA3C5D006374A8 /* Fonts */,
 				8428D7D01EA8EA4D00B4141D /* Play Assets */,
 				84C334431EA7357000BCD95B /* volume.png */,
 				84C334441EA7357000BCD95B /* settings.png */,
@@ -216,6 +239,14 @@
 				84334F6A1EA385F500609913 /* intro_character.png */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		84ABD21D1EAA3C5D006374A8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				84ABD21E1EAA3C7B006374A8 /* blow.normal.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		84D083631EA23CB40030A66A /* Scenes */ = {
@@ -311,6 +342,7 @@
 				8484C8BB1EA700C2003117CE /* green_monster.png in Resources */,
 				8428D7D91EA8EA7A00B4141D /* selection_pin.png in Resources */,
 				84334F641EA37D8300609913 /* bg.png in Resources */,
+				84ABD21F1EAA3C7B006374A8 /* blow.normal.ttf in Resources */,
 				84334F671EA37D8300609913 /* text.png in Resources */,
 				849E0DAB1E8D162E00BDDC0A /* LaunchScreen.storyboard in Resources */,
 				8428D7DD1EA8EA7A00B4141D /* centre_oval.png in Resources */,
@@ -338,9 +370,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8434A8081EA9D4D40007E6CE /* MainMenuScene.swift in Sources */,
 				8409AF7A1EA77B2A005B1A60 /* GameplayScene.swift in Sources */,
 				849E0DA11E8D162E00BDDC0A /* GameScene.swift in Sources */,
+				841D56B01EACD83600BF5830 /* GameplayController.swift in Sources */,
 				849E0DA31E8D162E00BDDC0A /* GameViewController.swift in Sources */,
+				841D56B21EACDC8700BF5830 /* GameManager.swift in Sources */,
+				8446C1E61EAD89950008042A /* CharacterSelectScene.swift in Sources */,
 				8409AF7D1EA77F08005B1A60 /* Player.swift in Sources */,
 				849E0D9B1E8D162E00BDDC0A /* AppDelegate.swift in Sources */,
 			);

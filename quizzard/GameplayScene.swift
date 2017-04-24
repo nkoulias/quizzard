@@ -12,30 +12,39 @@ import GameplayKit
 class GameplayScene: SKScene {
     
     var player: Player?;
-    var canSpin = false;
     
     override func didMove(to view: SKView) {
         player = self.childNode(withName: "spinner") as! Player?;
     }
     
+    func getLabels() {
+        GameplayController.instance.scoreText = self.childNode(withName: "score") as? SKLabelNode!
+        GameplayController.instance.lifeText = self.childNode(withName: "lives") as? SKLabelNode!
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        /*
-         player?.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat.pi * 2, duration: 0.75)), withKey: "rotate")
- */
+
         let random = GKRandomDistribution(lowestValue: 20, highestValue: 90)
         let r = random.nextInt()
-        //print(r)
-        player?.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(self.frame.width))
-        player?.physicsBody?.affectedByGravity = false
-        player?.physicsBody?.isDynamic = true
-        player?.physicsBody?.allowsRotation = true
-        player?.physicsBody?.angularVelocity = CGFloat(r)
-        player?.physicsBody?.angularDamping = 1.0
+        
+        for touch in touches {
+            let location = touch.location(in: self)
+            if atPoint(location).name == "play_button" {
+                player?.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(self.frame.width))
+                player?.physicsBody?.affectedByGravity = false
+                player?.physicsBody?.isDynamic = true
+                player?.physicsBody?.allowsRotation = true
+                player?.physicsBody?.angularVelocity = CGFloat(r)
+                player?.physicsBody?.angularDamping = 1.0
+                
+            }
+        }
+
+        
  }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-      //  player?.removeAction(forKey: "rotate")
-        //
+
     }
 }
