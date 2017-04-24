@@ -17,7 +17,37 @@ class CharacterSelectScene: SKScene {
         
         for touch in touches {
             let location = touch.location(in: self)
-            if atPoint(location).name == "monocle" {
+            if atPoint(location).name == "angry_teacher" {
+                let play_scene = GameplayScene(fileNamed: "Spin")
+                play_scene?.scaleMode = .aspectFill
+                self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                
+            } else if atPoint(location).name == "happy_monster" {
+                let play_scene = GameplayScene(fileNamed: "Spin")
+                play_scene?.scaleMode = .aspectFill
+                self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                
+            }else if atPoint(location).name == "monocle" {
+                let play_scene = GameplayScene(fileNamed: "Spin")
+                play_scene?.scaleMode = .aspectFill
+                self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                
+            }else if atPoint(location).name == "octopus" {
+                let play_scene = GameplayScene(fileNamed: "Spin")
+                play_scene?.scaleMode = .aspectFill
+                self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                
+            }else if atPoint(location).name == "drinking_monster" {
+                let play_scene = GameplayScene(fileNamed: "Spin")
+                play_scene?.scaleMode = .aspectFill
+                self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                
+            }else if atPoint(location).name == "slow_monster" {
+                let play_scene = GameplayScene(fileNamed: "Spin")
+                play_scene?.scaleMode = .aspectFill
+                self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                
+            }else if atPoint(location).name == "green_monster" {
                 let play_scene = GameplayScene(fileNamed: "Spin")
                 play_scene?.scaleMode = .aspectFill
                 self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
