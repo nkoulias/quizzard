@@ -29,6 +29,11 @@
 		8428D7DF1EA8EA7A00B4141D /* centre_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 8428D7D71EA8EA7A00B4141D /* centre_pin.png */; };
 		8428D7E21EA8EC0100B4141D /* History.png in Resources */ = {isa = PBXBuildFile; fileRef = 8428D7E11EA8EC0100B4141D /* History.png */; };
 		8428D7E41EA8EF9900B4141D /* Maths.png in Resources */ = {isa = PBXBuildFile; fileRef = 8428D7E31EA8EF9900B4141D /* Maths.png */; };
+		842932F61EB0BEDE000803F8 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842932F51EB0BEDE000803F8 /* History.swift */; };
+		842932F81EB0BF01000803F8 /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842932F71EB0BF01000803F8 /* Maths.swift */; };
+		842932FA1EB0BF1A000803F8 /* Science.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842932F91EB0BF1A000803F8 /* Science.swift */; };
+		842932FC1EB0BFF9000803F8 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842932FB1EB0BFF9000803F8 /* Pin.swift */; };
+		842932FE1EB0D8A8000803F8 /* Geography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842932FD1EB0D8A8000803F8 /* Geography.swift */; };
 		84334F641EA37D8300609913 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F5E1EA37D8300609913 /* bg.png */; };
 		84334F651EA37D8300609913 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F5F1EA37D8300609913 /* play_button.png */; };
 		84334F661EA37D8300609913 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F601EA37D8300609913 /* title.png */; };
@@ -88,6 +93,11 @@
 		8428D7D71EA8EA7A00B4141D /* centre_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = centre_pin.png; sourceTree = "<group>"; };
 		8428D7E11EA8EC0100B4141D /* History.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = History.png; sourceTree = "<group>"; };
 		8428D7E31EA8EF9900B4141D /* Maths.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Maths.png; sourceTree = "<group>"; };
+		842932F51EB0BEDE000803F8 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		842932F71EB0BF01000803F8 /* Maths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
+		842932F91EB0BF1A000803F8 /* Science.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Science.swift; sourceTree = "<group>"; };
+		842932FB1EB0BFF9000803F8 /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		842932FD1EB0D8A8000803F8 /* Geography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geography.swift; sourceTree = "<group>"; };
 		84334F5E1EA37D8300609913 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		84334F5F1EA37D8300609913 /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button.png; sourceTree = "<group>"; };
 		84334F601EA37D8300609913 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
@@ -163,6 +173,11 @@
 			isa = PBXGroup;
 			children = (
 				8409AF7C1EA77F08005B1A60 /* Player.swift */,
+				842932F51EB0BEDE000803F8 /* History.swift */,
+				842932F71EB0BF01000803F8 /* Maths.swift */,
+				842932F91EB0BF1A000803F8 /* Science.swift */,
+				842932FB1EB0BFF9000803F8 /* Pin.swift */,
+				842932FD1EB0D8A8000803F8 /* Geography.swift */,
 			);
 			name = "Player Class";
 			sourceTree = "<group>";
@@ -405,13 +420,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842932FC1EB0BFF9000803F8 /* Pin.swift in Sources */,
 				8434A8081EA9D4D40007E6CE /* MainMenuScene.swift in Sources */,
 				8409AF7A1EA77B2A005B1A60 /* GameplayScene.swift in Sources */,
 				849E0DA11E8D162E00BDDC0A /* GameScene.swift in Sources */,
 				846175931EADB5E3001637F0 /* Questions.swift in Sources */,
+				842932FE1EB0D8A8000803F8 /* Geography.swift in Sources */,
+				842932FA1EB0BF1A000803F8 /* Science.swift in Sources */,
 				841D56B01EACD83600BF5830 /* GameplayController.swift in Sources */,
+				842932F61EB0BEDE000803F8 /* History.swift in Sources */,
 				849E0DA31E8D162E00BDDC0A /* GameViewController.swift in Sources */,
 				841D56B21EACDC8700BF5830 /* GameManager.swift in Sources */,
+				842932F81EB0BF01000803F8 /* Maths.swift in Sources */,
 				8446C1E61EAD89950008042A /* CharacterSelectScene.swift in Sources */,
 				8409AF7D1EA77F08005B1A60 /* Player.swift in Sources */,
 				849E0D9B1E8D162E00BDDC0A /* AppDelegate.swift in Sources */,
