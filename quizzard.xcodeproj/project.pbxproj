@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8409AF7A1EA77B2A005B1A60 /* GameplayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409AF791EA77B2A005B1A60 /* GameplayScene.swift */; };
 		8409AF7D1EA77F08005B1A60 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409AF7C1EA77F08005B1A60 /* Player.swift */; };
+		8412DC631EB20ED300CD9BCC /* science_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 8412DC621EB20ED300CD9BCC /* science_selection.png */; };
+		8412DC651EB20EF600CD9BCC /* Spin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8412DC641EB20EF600CD9BCC /* Spin.sks */; };
 		8416C4AD1EAE06B5009C6081 /* question_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 8416C4AC1EAE06B5009C6081 /* question_box.png */; };
 		841C06BF1EA7154B00C9BB54 /* Play.sks in Resources */ = {isa = PBXBuildFile; fileRef = 841C06BE1EA7154B00C9BB54 /* Play.sks */; };
 		841C06C11EA715C400C9BB54 /* spinner.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C06C01EA715C400C9BB54 /* spinner.png */; };
@@ -47,8 +49,6 @@
 		846D100F1EB1E836008BBD36 /* geography_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100B1EB1E836008BBD36 /* geography_selection.png */; };
 		846D10101EB1E836008BBD36 /* history_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100C1EB1E836008BBD36 /* history_selection.png */; };
 		846D10111EB1E836008BBD36 /* maths_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100D1EB1E836008BBD36 /* maths_selection.png */; };
-		846D10121EB1E836008BBD36 /* science_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100E1EB1E836008BBD36 /* science_selection.png */; };
-		846D10141EB1E8C7008BBD36 /* Spin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 846D10131EB1E8C7008BBD36 /* Spin.sks */; };
 		8484C8BB1EA700C2003117CE /* green_monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BA1EA700C2003117CE /* green_monster.png */; };
 		8484C8BD1EA700D2003117CE /* single_eye_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BC1EA700D2003117CE /* single_eye_green.png */; };
 		8484C8BF1EA700E0003117CE /* monocle.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BE1EA700E0003117CE /* monocle.png */; };
@@ -76,6 +76,8 @@
 /* Begin PBXFileReference section */
 		8409AF791EA77B2A005B1A60 /* GameplayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayScene.swift; sourceTree = "<group>"; };
 		8409AF7C1EA77F08005B1A60 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		8412DC621EB20ED300CD9BCC /* science_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = science_selection.png; sourceTree = "<group>"; };
+		8412DC641EB20EF600CD9BCC /* Spin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Spin.sks; sourceTree = "<group>"; };
 		8416C4AC1EAE06B5009C6081 /* question_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question_box.png; sourceTree = "<group>"; };
 		841C06BE1EA7154B00C9BB54 /* Play.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Play.sks; sourceTree = "<group>"; };
 		841C06C01EA715C400C9BB54 /* spinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner.png; sourceTree = "<group>"; };
@@ -114,8 +116,6 @@
 		846D100B1EB1E836008BBD36 /* geography_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geography_selection.png; sourceTree = "<group>"; };
 		846D100C1EB1E836008BBD36 /* history_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history_selection.png; sourceTree = "<group>"; };
 		846D100D1EB1E836008BBD36 /* maths_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maths_selection.png; sourceTree = "<group>"; };
-		846D100E1EB1E836008BBD36 /* science_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = science_selection.png; sourceTree = "<group>"; };
-		846D10131EB1E8C7008BBD36 /* Spin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Spin.sks; sourceTree = "<group>"; };
 		8484C8BA1EA700C2003117CE /* green_monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_monster.png; sourceTree = "<group>"; };
 		8484C8BC1EA700D2003117CE /* single_eye_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = single_eye_green.png; sourceTree = "<group>"; };
 		8484C8BE1EA700E0003117CE /* monocle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monocle.png; sourceTree = "<group>"; };
@@ -199,10 +199,10 @@
 		8428D7D01EA8EA4D00B4141D /* Play Assets */ = {
 			isa = PBXGroup;
 			children = (
+				8412DC621EB20ED300CD9BCC /* science_selection.png */,
 				846D100B1EB1E836008BBD36 /* geography_selection.png */,
 				846D100C1EB1E836008BBD36 /* history_selection.png */,
 				846D100D1EB1E836008BBD36 /* maths_selection.png */,
-				846D100E1EB1E836008BBD36 /* science_selection.png */,
 				841E773A1EAE307E00EB5ADF /* back_button.png */,
 				84B2CE771EA8F80D00C00BDE /* pin.png */,
 				8428D7E31EA8EF9900B4141D /* Maths.png */,
@@ -304,11 +304,11 @@
 		84D083631EA23CB40030A66A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				846D10131EB1E8C7008BBD36 /* Spin.sks */,
 				8484C8C81EA70184003117CE /* CharacterSelect.sks */,
 				84D083641EA23CFF0030A66A /* MainMenu.sks */,
 				841C06BE1EA7154B00C9BB54 /* Play.sks */,
 				849753FE1EAD9AF600725206 /* QuestionScene.sks */,
+				8412DC641EB20EF600CD9BCC /* Spin.sks */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -398,7 +398,6 @@
 				84C334421EA734D500BCD95B /* lives.png in Resources */,
 				849E0DA81E8D162E00BDDC0A /* Assets.xcassets in Resources */,
 				8484C8BB1EA700C2003117CE /* green_monster.png in Resources */,
-				846D10121EB1E836008BBD36 /* science_selection.png in Resources */,
 				8428D7D91EA8EA7A00B4141D /* selection_pin.png in Resources */,
 				84334F641EA37D8300609913 /* bg.png in Resources */,
 				846D10111EB1E836008BBD36 /* maths_selection.png in Resources */,
@@ -415,8 +414,9 @@
 				841C06C11EA715C400C9BB54 /* spinner.png in Resources */,
 				8484C8C31EA700FD003117CE /* party_animal.png in Resources */,
 				841C06C71EA717B400C9BB54 /* spin_button.png in Resources */,
+				8412DC631EB20ED300CD9BCC /* science_selection.png in Resources */,
 				841E773B1EAE307E00EB5ADF /* back_button.png in Resources */,
-				846D10141EB1E8C7008BBD36 /* Spin.sks in Resources */,
+				8412DC651EB20EF600CD9BCC /* Spin.sks in Resources */,
 				841C06BF1EA7154B00C9BB54 /* Play.sks in Resources */,
 				84334F661EA37D8300609913 /* title.png in Resources */,
 				8484C8C91EA70184003117CE /* CharacterSelect.sks in Resources */,

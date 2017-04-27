@@ -44,7 +44,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
             let location = touch.location(in: self)
             //Start spinning the wheel
             if atPoint(location).name == "play_button" {
-                   //
+                player?.physicsBody?.angularVelocity = 0
                 player?.rotatePlayer()
                 
                 //Click back button
