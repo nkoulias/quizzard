@@ -10,7 +10,6 @@ import SpriteKit
 import GameplayKit
 
 struct ColliderType {
-    static let Player: UInt32 = 0
     static let Geography: UInt32 = 1
     static let Maths: UInt32 = 2
     static let History: UInt32 = 3
@@ -22,18 +21,19 @@ struct ColliderType {
 class Player: SKSpriteNode {
     
     func initializePlayer() {
-        self.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(self.frame.width))
+        self.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(self.frame.width)/2)
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.isDynamic = true
         self.physicsBody?.allowsRotation = true
         self.physicsBody?.pinned = true
-        self.physicsBody?.categoryBitMask = ColliderType.Player
+        //self.physicsBody?.categoryBitMask = ColliderType.Player
     }
     func rotatePlayer() {
-        let random = GKRandomDistribution(lowestValue: 20, highestValue: 90)
+        let random = GKRandomDistribution(lowestValue: 20, highestValue: 120)
         let r = random.nextInt()
+        self.physicsBody?.angularVelocity = 0
         self.physicsBody?.angularVelocity = CGFloat(r)
-        self.physicsBody?.angularDamping = 1.0
+        self.physicsBody?.angularDamping = 1.02
         
     }
 }
