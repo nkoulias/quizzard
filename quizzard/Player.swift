@@ -26,7 +26,6 @@ class Player: SKSpriteNode {
         self.physicsBody?.isDynamic = true
         self.physicsBody?.allowsRotation = true
         self.physicsBody?.pinned = true
-        //self.physicsBody?.categoryBitMask = ColliderType.Player
     }
     func rotatePlayer() {
         let random = GKRandomDistribution(lowestValue: 20, highestValue: 120)
