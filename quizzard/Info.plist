@@ -27,6 +27,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>blow.normal.ttf</string>
+		<string>Avenir Next.ttc</string>
+		<string>Avenir.ttc</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
