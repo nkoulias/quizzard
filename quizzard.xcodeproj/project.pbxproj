@@ -45,10 +45,12 @@
 		84334F6D1EA3884B00609913 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 84334F6C1EA3884B00609913 /* AppIcon.appiconset */; };
 		8434A8081EA9D4D40007E6CE /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434A8071EA9D4D40007E6CE /* MainMenuScene.swift */; };
 		8446C1E61EAD89950008042A /* CharacterSelectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446C1E51EAD89950008042A /* CharacterSelectScene.swift */; };
-		846175931EADB5E3001637F0 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846175921EADB5E3001637F0 /* Questions.swift */; };
+		846175931EADB5E3001637F0 /* QuestionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846175921EADB5E3001637F0 /* QuestionScene.swift */; };
 		846D100F1EB1E836008BBD36 /* geography_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100B1EB1E836008BBD36 /* geography_selection.png */; };
 		846D10101EB1E836008BBD36 /* history_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100C1EB1E836008BBD36 /* history_selection.png */; };
 		846D10111EB1E836008BBD36 /* maths_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100D1EB1E836008BBD36 /* maths_selection.png */; };
+		84741BDE1EB2DD59008B0B34 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84741BDD1EB2DD59008B0B34 /* Geo.swift */; };
+		84741BE01EB2E33B008B0B34 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84741BDF1EB2E33B008B0B34 /* Question.swift */; };
 		8484C8BB1EA700C2003117CE /* green_monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BA1EA700C2003117CE /* green_monster.png */; };
 		8484C8BD1EA700D2003117CE /* single_eye_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BC1EA700D2003117CE /* single_eye_green.png */; };
 		8484C8BF1EA700E0003117CE /* monocle.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BE1EA700E0003117CE /* monocle.png */; };
@@ -112,10 +114,12 @@
 		84334F6C1EA3884B00609913 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
 		8434A8071EA9D4D40007E6CE /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		8446C1E51EAD89950008042A /* CharacterSelectScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSelectScene.swift; sourceTree = "<group>"; };
-		846175921EADB5E3001637F0 /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		846175921EADB5E3001637F0 /* QuestionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionScene.swift; sourceTree = "<group>"; };
 		846D100B1EB1E836008BBD36 /* geography_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geography_selection.png; sourceTree = "<group>"; };
 		846D100C1EB1E836008BBD36 /* history_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history_selection.png; sourceTree = "<group>"; };
 		846D100D1EB1E836008BBD36 /* maths_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maths_selection.png; sourceTree = "<group>"; };
+		84741BDD1EB2DD59008B0B34 /* Geo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
+		84741BDF1EB2E33B008B0B34 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		8484C8BA1EA700C2003117CE /* green_monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_monster.png; sourceTree = "<group>"; };
 		8484C8BC1EA700D2003117CE /* single_eye_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = single_eye_green.png; sourceTree = "<group>"; };
 		8484C8BE1EA700E0003117CE /* monocle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monocle.png; sourceTree = "<group>"; };
@@ -170,7 +174,7 @@
 				8409AF791EA77B2A005B1A60 /* GameplayScene.swift */,
 				8434A8071EA9D4D40007E6CE /* MainMenuScene.swift */,
 				8446C1E51EAD89950008042A /* CharacterSelectScene.swift */,
-				846175921EADB5E3001637F0 /* Questions.swift */,
+				846175921EADB5E3001637F0 /* QuestionScene.swift */,
 			);
 			name = "Scene Classes";
 			sourceTree = "<group>";
@@ -183,6 +187,7 @@
 				842932F71EB0BF01000803F8 /* Maths.swift */,
 				842932F91EB0BF1A000803F8 /* Science.swift */,
 				842932FB1EB0BFF9000803F8 /* Pin.swift */,
+				84741BDD1EB2DD59008B0B34 /* Geo.swift */,
 			);
 			name = "Player Class";
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			children = (
 				841D56AF1EACD83600BF5830 /* GameplayController.swift */,
 				841D56B11EACDC8700BF5830 /* GameManager.swift */,
+				84741BDF1EB2E33B008B0B34 /* Question.swift */,
 			);
 			name = "Game Controllers and Managers";
 			sourceTree = "<group>";
@@ -434,10 +440,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				842932FC1EB0BFF9000803F8 /* Pin.swift in Sources */,
+				84741BE01EB2E33B008B0B34 /* Question.swift in Sources */,
 				8434A8081EA9D4D40007E6CE /* MainMenuScene.swift in Sources */,
 				8409AF7A1EA77B2A005B1A60 /* GameplayScene.swift in Sources */,
 				849E0DA11E8D162E00BDDC0A /* GameScene.swift in Sources */,
-				846175931EADB5E3001637F0 /* Questions.swift in Sources */,
+				846175931EADB5E3001637F0 /* QuestionScene.swift in Sources */,
 				842932FA1EB0BF1A000803F8 /* Science.swift in Sources */,
 				841D56B01EACD83600BF5830 /* GameplayController.swift in Sources */,
 				842932F61EB0BEDE000803F8 /* History.swift in Sources */,
@@ -447,6 +454,7 @@
 				8446C1E61EAD89950008042A /* CharacterSelectScene.swift in Sources */,
 				8409AF7D1EA77F08005B1A60 /* Player.swift in Sources */,
 				849E0D9B1E8D162E00BDDC0A /* AppDelegate.swift in Sources */,
+				84741BDE1EB2DD59008B0B34 /* Geo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

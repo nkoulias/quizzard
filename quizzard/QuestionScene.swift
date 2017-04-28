@@ -1,5 +1,5 @@
 //
-//  Questions.swift
+//  QuestionScene.swift
 //  quizzard
 //
 //  Created by Nick Koulias on 24/4/17.
@@ -8,8 +8,11 @@
 
 import SpriteKit
 
-class Questions: SKScene {
+class QuestionScene: SKScene {
     override func didMove(to view: SKView) {
+        print(Question.instance.topic)
+        let question = self.childNode(withName: "question_name") as? SKLabelNode
+        question?.text = Question.instance.topic
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
