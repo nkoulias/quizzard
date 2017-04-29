@@ -10,7 +10,6 @@ import SpriteKit
 
 class QuestionScene: SKScene {
     override func didMove(to view: SKView) {
-        print(Question.instance.topic)
         let question = self.childNode(withName: "question_name") as? SKLabelNode
         question?.text = Question.instance.topic
     }
