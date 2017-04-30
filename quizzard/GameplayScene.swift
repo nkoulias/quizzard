@@ -54,7 +54,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
                 play_scene?.scaleMode = .aspectFill
                 self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
             } else if atPoint(location).name == "settings_button" {
-                let play_scene = CharacterSelectScene(fileNamed: "SettingsScene")
+                let play_scene = SettingsScene(fileNamed: "SettingsScene")
                 play_scene?.scaleMode = .aspectFill
                 self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
             }
