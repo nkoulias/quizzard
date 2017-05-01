@@ -17,4 +17,70 @@ final class Question {
     
     var topic:String = ""
     var character:String=""
+    var lives: UInt32 = 3
+    var lives_text = SKLabelNode()
+    var lives_char = SKSpriteNode()
+    var main_char = SKSpriteNode()
+    
+    func setLives() {
+        switch Question.instance.character {
+        case "angry_teacher":
+            lives_char = SKSpriteNode(imageNamed: "angry_teacher_small")
+            lives_char.position = CGPoint(x: -295, y: 495)
+            lives_char.zPosition = CGFloat(5.0)
+            main_char = SKSpriteNode(imageNamed: "angry_teacher")
+            main_char.zPosition = CGFloat(1.0)
+            main_char.position = CGPoint(x: 180, y: 180)
+        case "green_monster":
+            lives_char = SKSpriteNode(imageNamed: "single_eye_green_small")
+            lives_char.position = CGPoint(x: -295, y: 495)
+            lives_char.zPosition = CGFloat(5.0)
+            main_char = SKSpriteNode(imageNamed: "single_eye_green")
+            main_char.zPosition = CGFloat(1.0)
+            main_char.position = CGPoint(x: 180, y: 180)
+            main_char.setScale(0.9)
+        case "slow_monster":
+            lives_char = SKSpriteNode(imageNamed: "purple_cutey_small")
+            lives_char.position = CGPoint(x: -295, y: 495)
+            lives_char.zPosition = CGFloat(5.0)
+            main_char = SKSpriteNode(imageNamed: "purple_cutey")
+            main_char.zPosition = CGFloat(1.0)
+            main_char.position = CGPoint(x: 180, y: 180)
+            main_char.setScale(0.8)
+        case "drinking_monster":
+            lives_char = SKSpriteNode(imageNamed: "party_animal_small")
+            lives_char.position = CGPoint(x: -295, y: 495)
+            lives_char.zPosition = CGFloat(5.0)
+            main_char = SKSpriteNode(imageNamed: "party_animal")
+            main_char.zPosition = CGFloat(1.0)
+            main_char.position = CGPoint(x: 180, y: 180)
+        case "octopus":
+            lives_char = SKSpriteNode(imageNamed: "octopus_small")
+            lives_char.position = CGPoint(x: -295, y: 495)
+            lives_char.zPosition = CGFloat(5.0)
+            main_char = SKSpriteNode(imageNamed: "octopus")
+            main_char.zPosition = CGFloat(1.0)
+            main_char.position = CGPoint(x: 180, y: 180)
+            main_char.setScale(0.9)
+        case "monocle":
+            lives_char = SKSpriteNode(imageNamed: "monocle_small")
+            lives_char.position = CGPoint(x: -295, y: 495)
+            lives_char.zPosition = CGFloat(5.0)
+            main_char = SKSpriteNode(imageNamed: "monocle")
+            main_char.zPosition = CGFloat(1.0)
+            main_char.position = CGPoint(x: 180, y: 180)
+            main_char.setScale(0.9)
+        case "happy_monster":
+            lives_char = SKSpriteNode(imageNamed: "green_monster_small")
+            lives_char.position = CGPoint(x: -295, y: 495)
+            lives_char.zPosition = CGFloat(5.0)
+            main_char = SKSpriteNode(imageNamed: "green_monster")
+            main_char.zPosition = CGFloat(1.0)
+            main_char.position = CGPoint(x: 180, y: 180)
+            main_char.setScale(0.8)
+        default:
+            break
+        }
+    }
+
 }

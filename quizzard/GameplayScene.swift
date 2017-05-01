@@ -18,8 +18,8 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     private var geography: Geo?
     var lives:UInt32 = 3
     var lives_text = SKLabelNode()
-    var lives_char = SKSpriteNode()
-    var main_char = SKSpriteNode()
+//    var lives_char = SKSpriteNode()
+//    var main_char = SKSpriteNode()
     
     var pin: Pin?
     public var topic :String = ""
@@ -27,8 +27,6 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
         
-    //    let char_scene = CharacterSelectScene(fileNamed: "CharacterSelect")
-     //   let angry_teacher = char_scene?.childNode(withName: "angry_teacher")
         player = self.childNode(withName: "spinner") as! Player?;
         maths = player?.childNode(withName: "maths") as! Maths?
         science = player?.childNode(withName: "science") as! Science?
@@ -43,93 +41,31 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         pin?.initializePin()
         geography?.initializeGeo()
         physicsWorld.contactDelegate = self
-        if Question.instance.character == "angry_teacher"{
-            lives_char = SKSpriteNode(imageNamed: "angry_teacher_small")
-            lives_char.position = CGPoint(x: -295, y: 495)
-            lives_char.zPosition = CGFloat(5.0)
-            main_char = SKSpriteNode(imageNamed: "angry_teacher")
-            main_char.zPosition = CGFloat(1.0)
-            main_char.position = CGPoint(x: 180, y: 180)
-            self.addChild(lives_char)
-            self.addChild(main_char)
-        } else if Question.instance.character == "green_monster"{
-            lives_char = SKSpriteNode(imageNamed: "single_eye_green_small")
-            lives_char.position = CGPoint(x: -295, y: 495)
-            lives_char.zPosition = CGFloat(5.0)
-            main_char = SKSpriteNode(imageNamed: "single_eye_green")
-            main_char.zPosition = CGFloat(1.0)
-            main_char.position = CGPoint(x: 180, y: 180)
-            main_char.setScale(0.9)
-            self.addChild(lives_char)
-            self.addChild(main_char)
-        } else if Question.instance.character == "slow_monster"{
-            lives_char = SKSpriteNode(imageNamed: "purple_cutey_small")
-            lives_char.position = CGPoint(x: -295, y: 495)
-            lives_char.zPosition = CGFloat(5.0)
-            main_char = SKSpriteNode(imageNamed: "purple_cutey")
-            main_char.zPosition = CGFloat(1.0)
-            main_char.position = CGPoint(x: 180, y: 180)
-            main_char.setScale(0.8)
-            self.addChild(lives_char)
-            self.addChild(main_char)
-        } else if Question.instance.character == "drinking_monster"{
-            lives_char = SKSpriteNode(imageNamed: "party_animal_small")
-            lives_char.position = CGPoint(x: -295, y: 495)
-            lives_char.zPosition = CGFloat(5.0)
-            main_char = SKSpriteNode(imageNamed: "party_animal")
-            main_char.zPosition = CGFloat(1.0)
-            main_char.position = CGPoint(x: 180, y: 180)
-            self.addChild(lives_char)
-            self.addChild(main_char)
-        } else if Question.instance.character == "octopus"{
-            lives_char = SKSpriteNode(imageNamed: "octopus_small")
-            lives_char.position = CGPoint(x: -295, y: 495)
-            lives_char.zPosition = CGFloat(5.0)
-            main_char = SKSpriteNode(imageNamed: "octopus")
-            main_char.zPosition = CGFloat(1.0)
-            main_char.position = CGPoint(x: 180, y: 180)
-            main_char.setScale(0.9)
-            self.addChild(lives_char)
-            self.addChild(main_char)
-        } else if Question.instance.character == "monocle"{
-            lives_char = SKSpriteNode(imageNamed: "monocle_small")
-            lives_char.position = CGPoint(x: -295, y: 495)
-            lives_char.zPosition = CGFloat(5.0)
-            main_char = SKSpriteNode(imageNamed: "monocle")
-            main_char.zPosition = CGFloat(1.0)
-            main_char.position = CGPoint(x: 180, y: 180)
-            main_char.setScale(0.9)
-            self.addChild(lives_char)
-            self.addChild(main_char)
-        } else if Question.instance.character == "happy_monster"{
-            lives_char = SKSpriteNode(imageNamed: "green_monster_small")
-            lives_char.position = CGPoint(x: -295, y: 495)
-            lives_char.zPosition = CGFloat(5.0)
-            main_char = SKSpriteNode(imageNamed: "green_monster")
-            main_char.zPosition = CGFloat(1.0)
-            main_char.position = CGPoint(x: 180, y: 180)
-            main_char.setScale(0.8)
-            self.addChild(lives_char)
-            self.addChild(main_char)
-        }
+        Question.instance.setLives()
+        self.addChild(Question.instance.lives_char)
+        self.addChild(Question.instance.main_char)
+
+    }
+    func updateLives() {
+        
+        
         switch lives {
         case 1:
             lives_text = self.childNode(withName: "lives_text") as! SKLabelNode
-            lives_text.position = CGPoint(x: lives_char.position.x+75, y: lives_char.position.y)
+            lives_text.position = CGPoint(x: Question.instance.lives_char.position.x+75, y: Question.instance.lives_char.position.y-15)
             lives_text.text = "x1"
         case 2:
             lives_text = self.childNode(withName: "lives_text") as! SKLabelNode
-            lives_text.position = CGPoint(x: lives_char.position.x+75, y: lives_char.position.y)
+            lives_text.position = CGPoint(x: Question.instance.lives_char.position.x+75, y: Question.instance.lives_char.position.y-15)
             lives_text.text = "x2"
         case 3:
             lives_text = self.childNode(withName: "lives_text") as! SKLabelNode
-            lives_text.position = CGPoint(x: lives_char.position.x+75, y: lives_char.position.y)
+            lives_text.position = CGPoint(x: Question.instance.lives_char.position.x+75, y: Question.instance.lives_char.position.y-15)
             lives_text.text = "x3"
         default:
             break
         }
     }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         for touch in touches {
