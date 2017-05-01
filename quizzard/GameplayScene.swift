@@ -41,30 +41,12 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         pin?.initializePin()
         geography?.initializeGeo()
         physicsWorld.contactDelegate = self
-        Question.instance.setLives()
+        Question.instance.setLivesIcon()
+        Question.instance.setLivesText()
         self.addChild(Question.instance.lives_char)
         self.addChild(Question.instance.main_char)
+        self.addChild(Question.instance.lives_text)
 
-    }
-    func updateLives() {
-        
-        
-        switch lives {
-        case 1:
-            lives_text = self.childNode(withName: "lives_text") as! SKLabelNode
-            lives_text.position = CGPoint(x: Question.instance.lives_char.position.x+75, y: Question.instance.lives_char.position.y-15)
-            lives_text.text = "x1"
-        case 2:
-            lives_text = self.childNode(withName: "lives_text") as! SKLabelNode
-            lives_text.position = CGPoint(x: Question.instance.lives_char.position.x+75, y: Question.instance.lives_char.position.y-15)
-            lives_text.text = "x2"
-        case 3:
-            lives_text = self.childNode(withName: "lives_text") as! SKLabelNode
-            lives_text.position = CGPoint(x: Question.instance.lives_char.position.x+75, y: Question.instance.lives_char.position.y-15)
-            lives_text.text = "x3"
-        default:
-            break
-        }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         

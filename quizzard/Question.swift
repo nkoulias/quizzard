@@ -22,7 +22,7 @@ final class Question {
     var lives_char = SKSpriteNode()
     var main_char = SKSpriteNode()
     
-    func setLives() {
+    func setLivesIcon() {
         switch Question.instance.character {
         case "angry_teacher":
             lives_char = SKSpriteNode(imageNamed: "angry_teacher_small")
@@ -78,6 +78,31 @@ final class Question {
             main_char.zPosition = CGFloat(1.0)
             main_char.position = CGPoint(x: 180, y: 180)
             main_char.setScale(0.8)
+        default:
+            break
+        }
+    }
+    func setLivesText() {
+        switch lives {
+        case 1:
+            lives_text.position = CGPoint(x: Question.instance.lives_char.position.x+75, y: Question.instance.lives_char.position.y-15)
+            lives_text.fontName = "Blow.ttf"
+            lives_text.fontSize = 48
+            lives_text.color = UIColor(white: 1, alpha: 1)
+            lives_text.text = "x1"
+        case 2:
+            lives_text.position = CGPoint(x: Question.instance.lives_char.position.x+75, y: Question.instance.lives_char.position.y-15)
+            lives_text.fontName = "Blow.ttf"
+            lives_text.fontSize = 48
+
+            lives_text.text = "x2"
+        case 3:
+            lives_text.position = CGPoint(x: Question.instance.lives_char.position.x+75, y: Question.instance.lives_char.position.y-15)
+            lives_text.fontName = "Blow.ttf"
+            lives_text.color = UIColor(white: 1, alpha: 1)
+            lives_text.fontSize = 48
+
+            lives_text.text = "x3"
         default:
             break
         }
