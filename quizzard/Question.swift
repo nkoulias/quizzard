@@ -16,4 +16,5 @@ final class Question {
     static let instance = Question();
     
     var topic:String = ""
+    var character:String=""
 }
