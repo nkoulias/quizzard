@@ -16,11 +16,6 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     private var history: History?
     private var science: Science?
     private var geography: Geo?
-    var lives:UInt32 = 3
-    var lives_text = SKLabelNode()
-//    var lives_char = SKSpriteNode()
-//    var main_char = SKSpriteNode()
-    
     var pin: Pin?
     public var topic :String = ""
     public var finishedRotation: Bool = false
@@ -41,12 +36,13 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         pin?.initializePin()
         geography?.initializeGeo()
         physicsWorld.contactDelegate = self
-        Question.instance.setLivesIcon()
-        Question.instance.setLivesText()
-        self.addChild(Question.instance.lives_char)
-        self.addChild(Question.instance.main_char)
-        self.addChild(Question.instance.lives_text)
-
+        GameManager.instance.setLivesIcon()
+        GameManager.instance.setLivesText()
+        GameManager.instance.setScoreText()
+        self.addChild(GameManager.instance.lives_char)
+        self.addChild(GameManager.instance.main_char)
+        self.addChild(GameManager.instance.lives_text)
+        self.addChild(GameManager.instance.score_text)
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         

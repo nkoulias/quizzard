@@ -58,6 +58,7 @@
 		8484C8C31EA700FD003117CE /* party_animal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8C21EA700FD003117CE /* party_animal.png */; };
 		8484C8C51EA7010E003117CE /* purple_cutey.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8C41EA7010E003117CE /* purple_cutey.png */; };
 		8484C8C91EA70184003117CE /* CharacterSelect.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8C81EA70184003117CE /* CharacterSelect.sks */; };
+		848B9C881EB82AAA0071C42F /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B9C871EB82AAA0071C42F /* GameData.swift */; };
 		849E0D9B1E8D162E00BDDC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E0D9A1E8D162E00BDDC0A /* AppDelegate.swift */; };
 		849E0D9F1E8D162E00BDDC0A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 849E0D9E1E8D162E00BDDC0A /* Actions.sks */; };
 		849E0DA11E8D162E00BDDC0A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E0DA01E8D162E00BDDC0A /* GameScene.swift */; };
@@ -139,6 +140,7 @@
 		8484C8C21EA700FD003117CE /* party_animal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = party_animal.png; sourceTree = "<group>"; };
 		8484C8C41EA7010E003117CE /* purple_cutey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple_cutey.png; sourceTree = "<group>"; };
 		8484C8C81EA70184003117CE /* CharacterSelect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CharacterSelect.sks; sourceTree = "<group>"; };
+		848B9C871EB82AAA0071C42F /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		849E0D971E8D162E00BDDC0A /* quizzard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quizzard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849E0D9A1E8D162E00BDDC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849E0D9E1E8D162E00BDDC0A /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		8409AF771EA77AE2005B1A60 /* Game Classes */ = {
 			isa = PBXGroup;
 			children = (
+				848B9C841EB82A830071C42F /* Game Data Class */,
 				841D56AE1EACD6DA00BF5830 /* Game Controllers and Managers */,
 				8409AF7B1EA77EFA005B1A60 /* Player Class */,
 				8409AF781EA77AF5005B1A60 /* Scene Classes */,
@@ -260,6 +263,14 @@
 				84489F301EB5FC2B003A5C08 /* UK.png */,
 			);
 			name = "Settings Assets";
+			sourceTree = "<group>";
+		};
+		848B9C841EB82A830071C42F /* Game Data Class */ = {
+			isa = PBXGroup;
+			children = (
+				848B9C871EB82AAA0071C42F /* GameData.swift */,
+			);
+			name = "Game Data Class";
 			sourceTree = "<group>";
 		};
 		849754001EAD9B4D00725206 /* Question Assets */ = {
@@ -529,6 +540,7 @@
 				849E0DA11E8D162E00BDDC0A /* GameScene.swift in Sources */,
 				846175931EADB5E3001637F0 /* QuestionScene.swift in Sources */,
 				842932FA1EB0BF1A000803F8 /* Science.swift in Sources */,
+				848B9C881EB82AAA0071C42F /* GameData.swift in Sources */,
 				841D56B01EACD83600BF5830 /* GameplayController.swift in Sources */,
 				842932F61EB0BEDE000803F8 /* History.swift in Sources */,
 				849E0DA31E8D162E00BDDC0A /* GameViewController.swift in Sources */,
