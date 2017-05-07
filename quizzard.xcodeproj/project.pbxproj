@@ -75,6 +75,7 @@
 		84B374EA1EB6DF90005CEBFB /* party_animal_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B374E31EB6DF90005CEBFB /* party_animal_small.png */; };
 		84B374EC1EB6DF90005CEBFB /* monocle_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B374E51EB6DF90005CEBFB /* monocle_small.png */; };
 		84B374EE1EB6DF90005CEBFB /* angry_teacher_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B374E71EB6DF90005CEBFB /* angry_teacher_small.png */; };
+		84BAE6691EBF2FEC00EF50AB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BAE6681EBF2FEC00EF50AB /* CloudKit.framework */; };
 		84C334451EA7357000BCD95B /* volume.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C334431EA7357000BCD95B /* volume.png */; };
 		84C9FB5B1EB4AFB100B393D1 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C9FB571EB4AFB100B393D1 /* Pause.png */; };
 		84C9FB5C1EB4AFB100B393D1 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C9FB581EB4AFB100B393D1 /* back.png */; };
@@ -86,6 +87,7 @@
 		84CA38781EB36570001941C1 /* Answer A.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CA38741EB36570001941C1 /* Answer A.png */; };
 		84CA387F1EB36DC8001941C1 /* QuestionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84CA387E1EB36DC8001941C1 /* QuestionScene.sks */; };
 		84D083651EA23CFF0030A66A /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84D083641EA23CFF0030A66A /* MainMenu.sks */; };
+		84FF3FB31EBE234E003A2327 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF3FB21EBE234E003A2327 /* DB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,7 +100,7 @@
 		8416C4AC1EAE06B5009C6081 /* question_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question_box.png; sourceTree = "<group>"; };
 		841CA2F11EA7095D00C2ACBD /* angry_teacher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = angry_teacher.png; path = ../angry_teacher.png; sourceTree = "<group>"; };
 		841D56AF1EACD83600BF5830 /* GameplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayController.swift; sourceTree = "<group>"; };
-		841D56B11EACDC8700BF5830 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		841D56B11EACDC8700BF5830 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; usesTabs = 1; };
 		8428D7D11EA8EA7A00B4141D /* selection_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selection_pin.png; sourceTree = "<group>"; };
 		8428D7D31EA8EA7A00B4141D /* Science.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Science.png; sourceTree = "<group>"; };
 		8428D7D41EA8EA7A00B4141D /* outer_oval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outer_oval.png; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		849E0DA71E8D162E00BDDC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		849E0DAA1E8D162E00BDDC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		849E0DAC1E8D162E00BDDC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A1C2B01EBDF39F009E2445 /* quizzard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = quizzard.entitlements; sourceTree = "<group>"; };
 		84AB6EC91EB4B5DB00C44FEA /* Spin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spin.png; sourceTree = "<group>"; };
 		84AB6ECB1EB4B72D00C44FEA /* SettingsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SettingsScene.sks; sourceTree = "<group>"; };
 		84ABD21E1EAA3C7B006374A8 /* blow.normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blow.normal.ttf; sourceTree = "<group>"; };
@@ -159,6 +162,7 @@
 		84B374E31EB6DF90005CEBFB /* party_animal_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = party_animal_small.png; sourceTree = "<group>"; };
 		84B374E51EB6DF90005CEBFB /* monocle_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monocle_small.png; sourceTree = "<group>"; };
 		84B374E71EB6DF90005CEBFB /* angry_teacher_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = angry_teacher_small.png; sourceTree = "<group>"; };
+		84BAE6681EBF2FEC00EF50AB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		84C334431EA7357000BCD95B /* volume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = volume.png; path = ../volume.png; sourceTree = "<group>"; };
 		84C9FB571EB4AFB100B393D1 /* Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause.png; sourceTree = "<group>"; };
 		84C9FB581EB4AFB100B393D1 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 		84CA387C1EB36C94001941C1 /* Avenir.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Avenir.ttc; sourceTree = "<group>"; };
 		84CA387E1EB36DC8001941C1 /* QuestionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = QuestionScene.sks; sourceTree = "<group>"; };
 		84D083641EA23CFF0030A66A /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
+		84FF3FB21EBE234E003A2327 /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BAE6691EBF2FEC00EF50AB /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +296,7 @@
 			children = (
 				849E0D991E8D162E00BDDC0A /* quizzard */,
 				849E0D981E8D162E00BDDC0A /* Products */,
+				84A1C2B11EBDF3A4009E2445 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -304,6 +311,8 @@
 		849E0D991E8D162E00BDDC0A /* quizzard */ = {
 			isa = PBXGroup;
 			children = (
+				84FF3FB11EBE232F003A2327 /* DB */,
+				84A1C2B01EBDF39F009E2445 /* quizzard.entitlements */,
 				8409AF771EA77AE2005B1A60 /* Game Classes */,
 				84D083631EA23CB40030A66A /* Scenes */,
 				849E0DB21E8D16B600BDDC0A /* Assets */,
@@ -337,6 +346,14 @@
 				84334F6A1EA385F500609913 /* intro_character.png */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		84A1C2B11EBDF3A4009E2445 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84BAE6681EBF2FEC00EF50AB /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		84ABD21D1EAA3C5D006374A8 /* Fonts */ = {
@@ -402,6 +419,14 @@
 			name = Scenes;
 			sourceTree = "<group>";
 		};
+		84FF3FB11EBE232F003A2327 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				84FF3FB21EBE234E003A2327 /* DB.swift */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -409,9 +434,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 849E0DAF1E8D162E00BDDC0A /* Build configuration list for PBXNativeTarget "quizzard" */;
 			buildPhases = (
+				13280D0F8B5F48BBA1CC83C3 /* [CP] Check Pods Manifest.lock */,
 				849E0D931E8D162D00BDDC0A /* Sources */,
 				849E0D941E8D162D00BDDC0A /* Frameworks */,
 				849E0D951E8D162D00BDDC0A /* Resources */,
+				8792364BF6E52BD80BF21901 /* [CP] Embed Pods Frameworks */,
+				78ACD3892ABFF887ECDC053D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -436,6 +464,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = NBWLYKYCV6;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -528,6 +564,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13280D0F8B5F48BBA1CC83C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		78ACD3892ABFF887ECDC053D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quizzard/Pods-quizzard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8792364BF6E52BD80BF21901 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quizzard/Pods-quizzard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		849E0D931E8D162D00BDDC0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -550,6 +634,7 @@
 				8446C1E61EAD89950008042A /* CharacterSelectScene.swift in Sources */,
 				8409AF7D1EA77F08005B1A60 /* Player.swift in Sources */,
 				849E0D9B1E8D162E00BDDC0A /* AppDelegate.swift in Sources */,
+				84FF3FB31EBE234E003A2327 /* DB.swift in Sources */,
 				84741BDE1EB2DD59008B0B34 /* Geo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,7 +759,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = quizzard/quizzard.entitlements;
 				DEVELOPMENT_TEAM = NBWLYKYCV6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/quizzard",
+				);
 				INFOPLIST_FILE = quizzard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = scenekit.nk.quizzard;
@@ -688,7 +778,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = quizzard/quizzard.entitlements;
 				DEVELOPMENT_TEAM = NBWLYKYCV6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/quizzard",
+				);
 				INFOPLIST_FILE = quizzard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = scenekit.nk.quizzard;

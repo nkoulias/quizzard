@@ -92,14 +92,14 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
             firstBody = contact.bodyB
             secondBody = contact.bodyA
         }
-        if (firstBody.node?.name == "pin" && secondBody.node?.name == "geography") {
-            Question.instance.topic = "geography"
-        } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "maths") {
-            Question.instance.topic = "maths"
-        } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "history") {
-            Question.instance.topic = "history"
-        } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "science") {
-            Question.instance.topic = "science"
-        }
+//        if (firstBody.node?.name == "pin" && secondBody.node?.name == "geography") {
+//            Question.instance.topic = "geography"
+//        } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "maths") {
+//            Question.instance.topic = "maths"
+//        } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "history") {
+//            Question.instance.topic = "history"
+//        } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "science") {
+//            Question.instance.topic = "science"
+//        }
     }
 }

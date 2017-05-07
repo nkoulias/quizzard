@@ -7,11 +7,44 @@
 //
 
 import SpriteKit
+import CloudKit
+import MobileCoreServices
 
 class MainMenuScene: SKScene {
     
     
     override func didMove(to view: SKView) {
+        
+        var container: CKContainer
+        var publicDB: CKDatabase?
+        container = CKContainer.default()
+        publicDB = container.publicCloudDatabase
+        let predicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: "Question", predicate: predicate)
+        publicDB?.perform(query, inZoneWith: nil, completionHandler: ({results, error in
+            
+            if (error != nil) {
+                DispatchQueue.main.async() {
+                    print(error!.localizedDescription)
+                }
+            } else {
+                if results!.count > 0 {
+                    
+                
+                    for result in results! {
+                        print(result.object(forKey: "Name") as! String)
+                    }
+                    //    let record = results![0]
+                    DispatchQueue.main.async() {
+                        
+                    }
+                } else {
+                    DispatchQueue.main.async() {
+                        print("No record matching the address was found")
+                    }
+                }
+            }
+        }))
         GameManager.instance.initializeGameData()
     }
     

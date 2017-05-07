@@ -7,11 +7,12 @@
 //
 
 import SpriteKit
+import CloudKit
 
 class QuestionScene: SKScene {
     override func didMove(to view: SKView) {
         let question = self.childNode(withName: "question_name") as? SKLabelNode
-        question?.text = Question.instance.topic
+      //  question?.text = Question.instance.topic
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
