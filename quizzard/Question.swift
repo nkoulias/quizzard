@@ -43,7 +43,6 @@ class Question {
     
     
     
-    
     // Memberwise initializer
     init(topic: String, quest: String, A: String, B: String, C: String, D: String, answer: String) {
         self.topic = topic
@@ -54,6 +53,7 @@ class Question {
         self.D = D
         self.answer = answer
     }
+    
     
     func setupQuestions() {
         

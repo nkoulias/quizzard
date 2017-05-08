@@ -13,7 +13,16 @@ import MobileCoreServices
 class MainMenuScene: SKScene {
     
     
+    
     override func didMove(to view: SKView) {
+        let getQuestions: Question
+        var A: String = ""
+        var B: String = ""
+        var C: String = ""
+        var D: String = ""
+        var topic: String = ""
+        var answer:String = ""
+        var quest_name:String = ""
         
         var container: CKContainer
         var publicDB: CKDatabase?
@@ -29,10 +38,15 @@ class MainMenuScene: SKScene {
                 }
             } else {
                 if results!.count > 0 {
-                    
-                
                     for result in results! {
-                        print(result.object(forKey: "Name") as! String)
+                        A = result.object(forKey: "A") as! String
+                        B = result.object(forKey: "B") as! String
+                        C = result.object(forKey: "C") as! String
+                        D = result.object(forKey: "D") as! String
+                        topic = result.object(forKey: "Topic") as! String
+                        answer = result.object(forKey: "Answer") as! String
+                        quest_name = result.object(forKey: "Name") as! String
+                        
                     }
                     //    let record = results![0]
                     DispatchQueue.main.async() {
