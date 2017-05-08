@@ -10,8 +10,11 @@ import Foundation
 import SpriteKit
 import GameplayKit
 import AVFoundation
+import CloudKit
 import AVKit
 import Darwin
+
+
 let synth = AVSpeechSynthesizer()
 var myUtterance = AVSpeechUtterance(string: "")
 var myUtterance_correct = AVSpeechUtterance(string: "")
@@ -29,7 +32,7 @@ var result = 0
 
 class Question {
     
- //   private init () {}
+    
     //static let instance = Question()
     
     var topic:String = ""
@@ -41,8 +44,18 @@ class Question {
     var answer: String
     var allQuestions = [Question]()
     
+    init() {
+        A = ""
+        B = ""
+        C = ""
+        D = ""
+        answer = ""
+        topic = ""
+        allQuestions = [Question]()
+        quest = ""
+    }
     
-    
+
     // Memberwise initializer
     init(topic: String, quest: String, A: String, B: String, C: String, D: String, answer: String) {
         self.topic = topic
@@ -55,19 +68,61 @@ class Question {
     }
     
     
-    func setupQuestions() {
+    func setupQuestions() -> [Question] {
+        var allQuestions = [Question]()
+        var A: String = ""
+        var B: String = ""
+        var C: String = ""
+        var D: String = ""
+        var topic: String = ""
+        var answer:String = ""
+        var quest_name:String = ""
         
-        let q1 = Question(topic: "Geography", quest: "An albatross is a", A: "bird", B: "beetle", C: "fruit", D: "city", answer: "bird")
-            let q2 = Question(topic: "Maths", quest: "How many side of an isoceles triangle are equal", A: "two", B: "none", C: "three", D: "one", answer: "two")
-            let q3 = Question(topic: "Geography", quest: "An albatross is a ", A: "bird", B: "beetle", C: "fruit", D: "city", answer: "bird")
-            let q4 = Question(topic: "Science", quest: "What is the name of the closest star to earth ", A: "Alpha Centauri A", B: "Alpha Centauri B", C: "Proxima Centauri", D: "the sun", answer: "the sun")
-            let q5 = Question(topic: "Geography", quest: "What is the driest desert on earth", A: "Atacama", B: "Sahara", C: "Simpson", D: "Kalahari", answer: "Atacama")
-            let q7 = Question(topic: "Science", quest: "Stratus, cumulus and nimbus are all types of what", A: "fish", B: "shapes", C: "clouds", D: "insects", answer: "clouds")
-            let q8 = Question(topic: "Maths", quest: "The perimeter of a circle is also known as what", A: "area", B: "volume", C: "radius", D: "circumference", answer: "circumference")
-            let q9 = Question(topic: "Science", quest: "What are female elephants called", A: "pawns", B: "prides", C: "pods", D: "cows", answer: "cows")
-            let q10 = Question(topic: "Geography", quest: "What is the name of the tallest mountain on Earth", A: "Vinson", B: "Everest", C: "Denali", D: "Koziosko", answer: "Everest")
-            let q11 = Question(topic: "Science", quest: "Which planet is also known as the Red Planet", A: "Earth", B: "Venus", C: "Saturn", D: "Mars", answer: "Mars")
-            let q12 = Question(topic: "Maths", quest: "How many sides does a nonagon have", A: "eight", B: "eleven", C: "twelve", D: "nine", answer: "nine")
+        var container: CKContainer
+        var publicDB: CKDatabase?
+        container = CKContainer.default()
+        publicDB = container.publicCloudDatabase
+        let bobPredicate = NSPredicate(format: "Topic = 'Maths'")
+        let query = CKQuery(recordType: "Question", predicate: bobPredicate)
+        publicDB?.perform(query, inZoneWith: nil, completionHandler: ({results, error in
+            
+            if (error != nil) {
+                DispatchQueue.main.async() {
+                    print(error!.localizedDescription)
+                }
+            } else {
+                if results!.count > 0 {
+                    var temp: Question
+                    for i in 0...(results!.count - 1) {
+                        A = results?[i].object(forKey: "A") as! String
+                        B = results?[i].object(forKey: "B") as! String
+                        C = results?[i].object(forKey: "C") as! String
+                        D = results?[i].object(forKey: "D") as! String
+                        topic = results?[i].object(forKey: "Topic") as! String
+                        answer = results?[i].object(forKey: "Answer") as! String
+                        quest_name = results?[i].object(forKey: "Name") as! String
+                        temp = Question(topic: topic, quest: quest_name, A: A, B: B, C: C, D: D, answer: answer)
+                        allQuestions.append(temp)
+                    }
+                } else {
+                    DispatchQueue.main.async() {
+                        print("No record matching the address was found")
+                    }
+                }
+            }
+        }))
+        
+//        let q1 = Question(topic: "Geography", quest: "An albatross is a", A: "bird", B: "beetle", C: "fruit", D: "city", answer: "bird")
+//            let q2 = Question(topic: "Maths", quest: "How many side of an isoceles triangle are equal", A: "two", B: "none", C: "three", D: "one", answer: "two")
+//            let q3 = Question(topic: "Geography", quest: "An albatross is a ", A: "bird", B: "beetle", C: "fruit", D: "city", answer: "bird")
+//            let q4 = Question(topic: "Science", quest: "What is the name of the closest star to earth ", A: "Alpha Centauri A", B: "Alpha Centauri B", C: "Proxima Centauri", D: "the sun", answer: "the sun")
+//            let q5 = Question(topic: "Geography", quest: "What is the driest desert on earth", A: "Atacama", B: "Sahara", C: "Simpson", D: "Kalahari", answer: "Atacama")
+//            let q7 = Question(topic: "Science", quest: "Stratus, cumulus and nimbus are all types of what", A: "fish", B: "shapes", C: "clouds", D: "insects", answer: "clouds")
+//            let q8 = Question(topic: "Maths", quest: "The perimeter of a circle is also known as what", A: "area", B: "volume", C: "radius", D: "circumference", answer: "circumference")
+//            let q9 = Question(topic: "Science", quest: "What are female elephants called", A: "pawns", B: "prides", C: "pods", D: "cows", answer: "cows")
+//            let q10 = Question(topic: "Geography", quest: "What is the name of the tallest mountain on Earth", A: "Vinson", B: "Everest", C: "Denali", D: "Koziosko", answer: "Everest")
+//            let q11 = Question(topic: "Science", quest: "Which planet is also known as the Red Planet", A: "Earth", B: "Venus", C: "Saturn", D: "Mars", answer: "Mars")
+//            let q12 = Question(topic: "Maths", quest: "How many sides does a nonagon have", A: "eight", B: "eleven", C: "twelve", D: "nine", answer: "nine")
 //            let q13 = Questions(quest: "In which country will you find the famous pyramids of Giza", A: "Egypt", B: "Italy", C: "France", D: "Switzerland", answer: "Egypt")
 //            let q14 = Questions(quest: "How often is the football world cup finals held", A: "every year", B: "twice a year", C: "every four years", D: "every second year", answer: "every four years")
 //            let q15 = Questions(quest: "How many cards are contained in a standard deck", A: "forty eight", B: "fifty six", C: "fifty four", D: "fifty eight", answer: "fifty four")
@@ -107,17 +162,17 @@ class Question {
 //            let q49 = Questions(quest: "Saint Petersburg is a major city in what country?", A: "Ireland", B: "Russia", C: "Poland", D: "Germany", answer: "Russia")
 //            let q50 = Questions(quest: "Tangiers would be found in which country", A: "Morocco", B: "Egypt", C: "South Africa", D: "Australia", answer: "Morocco")
 //
-            allQuestions.append(q1)
-            allQuestions.append(q2)
-            allQuestions.append(q3)
-            allQuestions.append(q4)
-            allQuestions.append(q5)
-            allQuestions.append(q7)
-            allQuestions.append(q8)
-            allQuestions.append(q9)
-            allQuestions.append(q10)
-            allQuestions.append(q11)
-            allQuestions.append(q12)
+//            allQuestions.append(q1)
+//            allQuestions.append(q2)
+//            allQuestions.append(q3)
+//            allQuestions.append(q4)
+//            allQuestions.append(q5)
+//            allQuestions.append(q7)
+//            allQuestions.append(q8)
+//            allQuestions.append(q9)
+//            allQuestions.append(q10)
+//            allQuestions.append(q11)
+//            allQuestions.append(q12)
 //            setupQuestions.append(q13)
 //            setupQuestions.append(q14)
 //            setupQuestions.append(q15)
@@ -157,6 +212,7 @@ class Question {
 //            setupQuestions.append(q49)
 //            setupQuestions.append(q50)
 //            qCount = setupQuestions.count
+        return (allQuestions)
     }
     
     func pickQuestion(input:UInt32) -> Int {

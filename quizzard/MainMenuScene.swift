@@ -15,51 +15,60 @@ class MainMenuScene: SKScene {
     
     
     override func didMove(to view: SKView) {
-        let getQuestions: Question
-        var A: String = ""
-        var B: String = ""
-        var C: String = ""
-        var D: String = ""
-        var topic: String = ""
-        var answer:String = ""
-        var quest_name:String = ""
         
-        var container: CKContainer
-        var publicDB: CKDatabase?
-        container = CKContainer.default()
-        publicDB = container.publicCloudDatabase
-        let predicate = NSPredicate(value: true)
-        let query = CKQuery(recordType: "Question", predicate: predicate)
-        publicDB?.perform(query, inZoneWith: nil, completionHandler: ({results, error in
+        GameManager.instance.initializeGameData()
+        setupQuestions() {
+            takeItAll in
+            GameManager.instance.setQuestions(questions: takeItAll)
+        }
+        
+    }
+    
+    func setupQuestions(completionHandler: @escaping (_ takeItAll: [Question]) ->()) {
+            var allQuestions = [Question]()
+            var A: String = ""
+            var B: String = ""
+            var C: String = ""
+            var D: String = ""
+            var topic: String = ""
+            var answer:String = ""
+            var quest_name:String = ""
             
-            if (error != nil) {
-                DispatchQueue.main.async() {
-                    print(error!.localizedDescription)
-                }
-            } else {
-                if results!.count > 0 {
-                    for result in results! {
-                        A = result.object(forKey: "A") as! String
-                        B = result.object(forKey: "B") as! String
-                        C = result.object(forKey: "C") as! String
-                        D = result.object(forKey: "D") as! String
-                        topic = result.object(forKey: "Topic") as! String
-                        answer = result.object(forKey: "Answer") as! String
-                        quest_name = result.object(forKey: "Name") as! String
-                        
-                    }
-                    //    let record = results![0]
+            var container: CKContainer
+            var publicDB: CKDatabase?
+            container = CKContainer.default()
+            publicDB = container.publicCloudDatabase
+            let bobPredicate = NSPredicate(format: "Topic = 'Maths'")
+            let query = CKQuery(recordType: "Question", predicate: bobPredicate)
+            publicDB?.perform(query, inZoneWith: nil, completionHandler: ({results, error in
+                
+                if (error != nil) {
                     DispatchQueue.main.async() {
-                        
+                        print(error!.localizedDescription)
                     }
                 } else {
-                    DispatchQueue.main.async() {
-                        print("No record matching the address was found")
+                    if results!.count > 0 {
+                        var temp: Question
+                        for i in 1...(results!.count) {
+                            A = results?[i].object(forKey: "A") as! String
+                            B = results?[i].object(forKey: "B") as! String
+                            C = results?[i].object(forKey: "C") as! String
+                            D = results?[i].object(forKey: "D") as! String
+                            topic = results?[i].object(forKey: "Topic") as! String
+                            answer = results?[i].object(forKey: "Answer") as! String
+                            quest_name = results?[i].object(forKey: "Name") as! String
+                            temp = Question(topic: topic, quest: quest_name, A: A, B: B, C: C, D: D, answer: answer)
+                            allQuestions.append(temp)
+                            completionHandler(allQuestions)
+                            
+                        }
+                    } else {
+                        DispatchQueue.main.async() {
+                            print("No record matching the address was found")
+                        }
                     }
                 }
-            }
-        }))
-        GameManager.instance.initializeGameData()
+            }))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -81,12 +90,3 @@ class MainMenuScene: SKScene {
         
     }
 }
-
-
-
-
-
-
-
-
-

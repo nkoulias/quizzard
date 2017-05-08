@@ -18,6 +18,7 @@ class GameData: NSObject, NSCoding {
         static let Character = "Character"
         static let Score = "Score"
         static let Lives = "Lives"
+        static let Questions = "Questions"
         
     }
     
@@ -28,6 +29,7 @@ class GameData: NSObject, NSCoding {
     private var character:String = ""
     private var score:Int32 = 0
     private var lives:Int32 = 3
+    private var questions = [Question]()
     
     override init() {}
     
@@ -41,6 +43,7 @@ class GameData: NSObject, NSCoding {
         self.character = aDecoder.decodeObject(forKey: Keys.Character)as! String
         self.score = aDecoder.decodeCInt(forKey: Keys.Score)
         self.lives = aDecoder.decodeCInt(forKey: Keys.Lives)
+        self.questions = aDecoder.decodeObject(forKey: Keys.Questions)as! [Question]
     }
     
     func encode(with aCoder: NSCoder) {
@@ -51,10 +54,19 @@ class GameData: NSObject, NSCoding {
         aCoder.encode(self.character, forKey: Keys.Character)
         aCoder.encode(self.score, forKey: Keys.Score)
         aCoder.encode(self.lives, forKey: Keys.Lives)
+        aCoder.encode(self.questions, forKey: Keys.Questions)
     }
     
     func getLives()->Int32 {
         return self.lives
+    }
+    
+    func getQuestions()->[Question] {
+        return self.questions
+    }
+    
+    func setQuestions(questions:[Question]) {
+        self.questions = questions
     }
     
     func setLives(lives: Int32) {
