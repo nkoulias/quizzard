@@ -27,7 +27,6 @@ class MainMenuScene: SKScene {
                 let setup = NSKeyedUnarchiver.unarchiveObject(with: decode_data!) as! [Questions]
                 let qCount = setup.count
                 print(qCount)
-                print("")
         }
     }
     

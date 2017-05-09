@@ -80,8 +80,8 @@ class Questions: NSObject, NSCoding {
         var publicDB: CKDatabase?
         container = CKContainer.default()
         publicDB = container.publicCloudDatabase
-        let bobPredicate = NSPredicate(format: "Topic = 'Maths'")
-        let query = CKQuery(recordType: "Question", predicate: bobPredicate)
+        let predicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: "Question", predicate: predicate)
         publicDB?.perform(query, inZoneWith: nil, completionHandler: ({results, error in
             
             if (error != nil) {
