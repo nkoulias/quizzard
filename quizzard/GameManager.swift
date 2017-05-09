@@ -104,15 +104,7 @@ class GameManager {
     func setLives(lives:Int32){
         self.gameData?.setLives(lives: lives)
     }
-	
-	func getQuestions()->[Question] {
-		return (self.gameData!.getQuestions())
-	}
-	
-	func setQuestions(questions: [Question]) {
-		self.gameData?.setQuestions(questions: questions)
-	}
-    
+	    
     func setLivesIcon() {
         switch GameManager.instance.getCharacter() {
         case "angry_teacher":

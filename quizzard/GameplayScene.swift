@@ -43,6 +43,8 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(GameManager.instance.main_char)
         self.addChild(GameManager.instance.lives_text)
         self.addChild(GameManager.instance.score_text)
+    //    var abc = GameManager.instance.getQuestions()
+      //  print("Got it")
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
