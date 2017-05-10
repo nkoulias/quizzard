@@ -23,10 +23,6 @@ class MainMenuScene: SKScene {
                 _takeItAll in
                 let encode_data = NSKeyedArchiver.archivedData(withRootObject: _takeItAll)
                 defaults.set(encode_data, forKey: "Questions")
-                let decode_data = defaults.object(forKey: "Questions") as? Data
-                let setup = NSKeyedUnarchiver.unarchiveObject(with: decode_data!) as! [Questions]
-                let qCount = setup.count
-                print(qCount)
         }
     }
     
