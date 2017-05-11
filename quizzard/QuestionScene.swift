@@ -23,11 +23,12 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         let defaults = UserDefaults.standard
         let decode_data = defaults.object(forKey: "Questions") as? Data
         let setup = NSKeyedUnarchiver.unarchiveObject(with: decode_data!) as! [Questions]
-        let qCount = setup.count
-        var filter = setup.filter({$0.topic == "Maths"})
+        let decode_topic = defaults.object(forKey: "Topic") as? String
+        let filter = setup.filter({$0.topic == decode_topic}) 
+        let qCount = filter.count
         let result = pickQuestion(input: UInt32(qCount))
-      //  RandomQuestions(input: Int(result), setup: setup)
-       // showData(input: result, setup: setup)
+        RandomQuestions(input: Int(result), filter: filter)
+     //   showData(input: result, setup: filter)
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -45,20 +46,18 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         return Int(arc4random() % input)
     }
     
-    func RandomQuestions (input:Int, setup:[Questions]) {
+    func RandomQuestions (input:Int, filter:[Questions]) {
         
         let synth = AVSpeechSynthesizer()
         synth.delegate = self
         var myUtterance = AVSpeechUtterance(string: "")
-        let totalUtterance: String = (setup[input].quest + "..." + setup[input].A + "..." + setup[input].B + "..." + setup[input].C + "... or ..." + setup[input].D)
+        let totalUtterance: String = (filter[input].quest + "..." + filter[input].A + "..." + filter[input].B + "..." + filter[input].C + "... or ..." + filter[input].D)
         
         myUtterance = AVSpeechUtterance(string: totalUtterance)
-        myUtterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
         myUtterance.rate = 0.5
-//        myUtterance.pitchMultiplier = 1.0
-//        myUtterance.volume = 1.0
+        myUtterance.volume = 1.0
         myUtterance.preUtteranceDelay = 0.5
-        myUtterance.postUtteranceDelay = 0.05
+        myUtterance.postUtteranceDelay = 0.5
         synth.speak(myUtterance)
         
     }

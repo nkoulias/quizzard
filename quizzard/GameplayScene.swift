@@ -84,7 +84,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     func didBegin(_ contact: SKPhysicsContact) {
-        
+        let defaults = UserDefaults.standard
         var firstBody = SKPhysicsBody()
         var secondBody = SKPhysicsBody()
         if (contact.bodyA.node?.name == "pin") {
@@ -94,14 +94,18 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
             firstBody = contact.bodyB
             secondBody = contact.bodyA
         }
-//        if (firstBody.node?.name == "pin" && secondBody.node?.name == "geography") {
-//            Question.instance.topic = "geography"
-//        } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "maths") {
-//            Question.instance.topic = "maths"
-//        } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "history") {
-//            Question.instance.topic = "history"
-//        } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "science") {
-//            Question.instance.topic = "science"
-//        }
+        if (firstBody.node?.name == "pin" && secondBody.node?.name == "geography") {
+            let set_topic = secondBody.node?.name
+            defaults.set(set_topic, forKey: "Topic")
+        } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "maths") {
+            let set_topic = secondBody.node?.name
+            defaults.set(set_topic, forKey: "Topic")
+        } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "history") {
+            let set_topic = secondBody.node?.name
+            defaults.set(set_topic, forKey: "Topic")
+        } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "science") {
+            let set_topic = secondBody.node?.name
+            defaults.set(set_topic, forKey: "Topic")
+        }
     }
 }
