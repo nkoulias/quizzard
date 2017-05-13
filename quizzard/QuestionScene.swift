@@ -50,15 +50,28 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         
         let synth = AVSpeechSynthesizer()
         synth.delegate = self
-        var myUtterance = AVSpeechUtterance(string: "")
-        let totalUtterance: String = (filter[input].quest + "..." + filter[input].A + "..." + filter[input].B + "..." + filter[input].C + "... or ..." + filter[input].D)
-        
-        myUtterance = AVSpeechUtterance(string: totalUtterance)
-        myUtterance.rate = 0.5
-        myUtterance.volume = 1.0
-        myUtterance.preUtteranceDelay = 0.5
-        myUtterance.postUtteranceDelay = 0.5
-        synth.speak(myUtterance)
+        let qUtterance = AVSpeechUtterance(string: filter[input].quest)
+        let aUtterance = AVSpeechUtterance(string: filter[input].A)
+        let bUtterance = AVSpeechUtterance(string: filter[input].B)
+        let cUtterance = AVSpeechUtterance(string: filter[input].C)
+        let dUtterance = AVSpeechUtterance(string: filter[input].D)
+        let orUtterance = AVSpeechUtterance(string: "or")
+//        myUtterance.rate = 0.5
+//        myUtterance.volume = 1.0
+//        myUtterance.preUtteranceDelay = 0.5
+      //  myUtterance.postUtteranceDelay = 0.5
+        qUtterance.preUtteranceDelay = 1.0
+        synth.speak(qUtterance)
+        qUtterance.postUtteranceDelay = 0.2
+        synth.speak(aUtterance)
+        aUtterance.postUtteranceDelay = 0.2
+        synth.speak(bUtterance)
+        bUtterance.postUtteranceDelay = 0.2
+        synth.speak(cUtterance)
+        cUtterance.postUtteranceDelay = 0.1
+        synth.speak(orUtterance)
+        orUtterance.postUtteranceDelay = 0.2
+        synth.speak(dUtterance)
         
     }
     

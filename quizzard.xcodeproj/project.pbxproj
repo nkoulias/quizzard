@@ -85,6 +85,7 @@
 		84C9FB5E1EB4AFB100B393D1 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C9FB5A1EB4AFB100B393D1 /* play.png */; };
 		84CA387F1EB36DC8001941C1 /* QuestionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84CA387E1EB36DC8001941C1 /* QuestionScene.sks */; };
 		84D083651EA23CFF0030A66A /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84D083641EA23CFF0030A66A /* MainMenu.sks */; };
+		84D589451EC6CCB100FF221C /* quizzard.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 84D589441EC6CCB100FF221C /* quizzard.xcworkspace */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,6 +173,7 @@
 		84CA387C1EB36C94001941C1 /* Avenir.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Avenir.ttc; sourceTree = "<group>"; };
 		84CA387E1EB36DC8001941C1 /* QuestionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = QuestionScene.sks; sourceTree = "<group>"; };
 		84D083641EA23CFF0030A66A /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
+		84D589441EC6CCB100FF221C /* quizzard.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = quizzard.xcworkspace; sourceTree = "<group>"; };
 		DF652B97EF3CE01A978B6F54 /* Pods-quizzard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quizzard/Pods-quizzard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -288,6 +290,7 @@
 		849E0D8E1E8D162D00BDDC0A = {
 			isa = PBXGroup;
 			children = (
+				84D589441EC6CCB100FF221C /* quizzard.xcworkspace */,
 				849E0D991E8D162E00BDDC0A /* quizzard */,
 				849E0D981E8D162E00BDDC0A /* Products */,
 				84A1C2B11EBDF3A4009E2445 /* Frameworks */,
@@ -544,6 +547,7 @@
 				8484C8C31EA700FD003117CE /* party_animal.png in Resources */,
 				8412DC631EB20ED300CD9BCC /* science_selection.png in Resources */,
 				84B374EE1EB6DF90005CEBFB /* angry_teacher_small.png in Resources */,
+				84D589451EC6CCB100FF221C /* quizzard.xcworkspace in Resources */,
 				8412DC651EB20EF600CD9BCC /* Spin.sks in Resources */,
 				841D68A81EC6C6CE00414016 /* button_c.png in Resources */,
 				84334F661EA37D8300609913 /* title.png in Resources */,
