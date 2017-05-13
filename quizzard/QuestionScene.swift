@@ -28,7 +28,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         let qCount = filter.count
         let result = pickQuestion(input: UInt32(qCount))
         RandomQuestions(input: Int(result), filter: filter)
-     //   showData(input: result, setup: filter)
+        showData(input: result, filter: filter)
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -56,10 +56,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         let cUtterance = AVSpeechUtterance(string: filter[input].C)
         let dUtterance = AVSpeechUtterance(string: filter[input].D)
         let orUtterance = AVSpeechUtterance(string: "or")
-//        myUtterance.rate = 0.5
-//        myUtterance.volume = 1.0
-//        myUtterance.preUtteranceDelay = 0.5
-      //  myUtterance.postUtteranceDelay = 0.5
+
         qUtterance.preUtteranceDelay = 1.0
         synth.speak(qUtterance)
         qUtterance.postUtteranceDelay = 0.2
@@ -75,10 +72,52 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         
     }
     
-    func showData(input: Int, setup: [Questions]) {
-        let question = self.childNode(withName: "question_name") as? SKLabelNode
-        question?.text = setup[input].quest
-        question?.addChild(question!)
+    func showData(input: Int, filter: [Questions]) {
+        
+        let question_label = SKLabelNode()
+        question_label.fontName = "Avenir.ttf"
+        question_label.fontSize = 48
+        question_label.color = UIColor(white: 1, alpha: 1)
+        question_label.position = CGPoint(x: 0, y: 400)
+        question_label.zPosition = CGFloat(5.0)
+        question_label.text = filter[input].quest
+        self.addChild(question_label)
+        
+        let a_label = SKLabelNode()
+        a_label.fontName = "Avenir.ttf"
+        a_label.fontSize = 48
+        a_label.color = UIColor(white: 1, alpha: 1)
+        a_label.position = CGPoint(x: 0, y: 170)
+        a_label.zPosition = CGFloat(5.0)
+        a_label.text = filter[input].A
+        self.addChild(a_label)
+        
+        let b_label = SKLabelNode()
+        b_label.fontName = "Avenir.ttf"
+        b_label.fontSize = 48
+        b_label.color = UIColor(white: 1, alpha: 1)
+        b_label.position = CGPoint(x: 0, y: 20)
+        b_label.zPosition = CGFloat(5.0)
+        b_label.text = filter[input].B
+        self.addChild(b_label)
+        
+        let c_label = SKLabelNode()
+        c_label.fontName = "Avenir.ttf"
+        c_label.fontSize = 48
+        c_label.color = UIColor(white: 1, alpha: 1)
+        c_label.position = CGPoint(x: 0, y: -130)
+        c_label.zPosition = CGFloat(5.0)
+        c_label.text = filter[input].C
+        self.addChild(c_label)
+        
+        let d_label = SKLabelNode()
+        d_label.fontName = "Avenir.ttf"
+        d_label.fontSize = 48
+        d_label.color = UIColor(white: 1, alpha: 1)
+        d_label.position = CGPoint(x: 0, y: -280)
+        d_label.zPosition = CGFloat(5.0)
+        d_label.text = filter[input].D
+        self.addChild(d_label)
         
     }
 }
