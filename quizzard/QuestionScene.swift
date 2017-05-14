@@ -75,7 +75,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
     func showData(input: Int, filter: [Questions]) {
         
         //let question_label = SKLabelNode()
-        let question_label = SKMultilineLabel(text: filter[input].quest, labelWidth: 650, pos: CGPoint(x: 0,y: 500))
+        let question_label = SKMultilineLabel(text: filter[input].quest, labelWidth: 700, pos: CGPoint(x: 0,y: 550))
      //   question_label.fontName = "Avenir.ttf"
       //  question_label.fontSize = 30
      //   question_label.fontColor = UIColor(white: 1, alpha: 1)
