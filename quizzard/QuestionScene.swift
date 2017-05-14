@@ -27,8 +27,8 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         let filter = setup.filter({$0.topic == decode_topic}) 
         let qCount = filter.count
         let result = pickQuestion(input: UInt32(qCount))
-        RandomQuestions(input: Int(result), filter: filter)
         showData(input: result, filter: filter)
+        RandomQuestions(input: Int(result), filter: filter)
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -59,33 +59,34 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
 
         qUtterance.preUtteranceDelay = 1.0
         synth.speak(qUtterance)
-        qUtterance.postUtteranceDelay = 0.2
+        qUtterance.postUtteranceDelay = 0.1
         synth.speak(aUtterance)
-        aUtterance.postUtteranceDelay = 0.2
+        aUtterance.postUtteranceDelay = 0.1
         synth.speak(bUtterance)
-        bUtterance.postUtteranceDelay = 0.2
+        bUtterance.postUtteranceDelay = 0.1
         synth.speak(cUtterance)
         cUtterance.postUtteranceDelay = 0.1
         synth.speak(orUtterance)
-        orUtterance.postUtteranceDelay = 0.2
+        //orUtterance.postUtteranceDelay = 0.1
         synth.speak(dUtterance)
         
     }
     
     func showData(input: Int, filter: [Questions]) {
         
-        let question_label = SKLabelNode()
-        question_label.fontName = "Avenir.ttf"
-        question_label.fontSize = 48
-        question_label.color = UIColor(white: 1, alpha: 1)
-        question_label.position = CGPoint(x: 0, y: 400)
+        //let question_label = SKLabelNode()
+        let question_label = SKMultilineLabel(text: filter[input].quest, labelWidth: 650, pos: CGPoint(x: 0,y: 500))
+     //   question_label.fontName = "Avenir.ttf"
+      //  question_label.fontSize = 30
+     //   question_label.fontColor = UIColor(white: 1, alpha: 1)
+      //  question_label.position = CGPoint(x: 0, y: 400)
         question_label.zPosition = CGFloat(5.0)
-        question_label.text = filter[input].quest
+      //  question_label.text = filter[input].quest
         self.addChild(question_label)
         
         let a_label = SKLabelNode()
         a_label.fontName = "Avenir.ttf"
-        a_label.fontSize = 48
+        a_label.fontSize = 38
         a_label.color = UIColor(white: 1, alpha: 1)
         a_label.position = CGPoint(x: 0, y: 170)
         a_label.zPosition = CGFloat(5.0)
@@ -94,7 +95,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         
         let b_label = SKLabelNode()
         b_label.fontName = "Avenir.ttf"
-        b_label.fontSize = 48
+        b_label.fontSize = 38
         b_label.color = UIColor(white: 1, alpha: 1)
         b_label.position = CGPoint(x: 0, y: 20)
         b_label.zPosition = CGFloat(5.0)
@@ -103,7 +104,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         
         let c_label = SKLabelNode()
         c_label.fontName = "Avenir.ttf"
-        c_label.fontSize = 48
+        c_label.fontSize = 38
         c_label.color = UIColor(white: 1, alpha: 1)
         c_label.position = CGPoint(x: 0, y: -130)
         c_label.zPosition = CGFloat(5.0)
@@ -112,7 +113,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         
         let d_label = SKLabelNode()
         d_label.fontName = "Avenir.ttf"
-        d_label.fontSize = 48
+        d_label.fontSize = 38
         d_label.color = UIColor(white: 1, alpha: 1)
         d_label.position = CGPoint(x: 0, y: -280)
         d_label.zPosition = CGFloat(5.0)

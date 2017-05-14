@@ -78,6 +78,7 @@
 		84B374EC1EB6DF90005CEBFB /* monocle_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B374E51EB6DF90005CEBFB /* monocle_small.png */; };
 		84B374EE1EB6DF90005CEBFB /* angry_teacher_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B374E71EB6DF90005CEBFB /* angry_teacher_small.png */; };
 		84BAE6691EBF2FEC00EF50AB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BAE6681EBF2FEC00EF50AB /* CloudKit.framework */; };
+		84C23A561EC7F7E8009AB95E /* SKMultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C23A551EC7F7E8009AB95E /* SKMultilineLabel.swift */; };
 		84C334451EA7357000BCD95B /* volume.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C334431EA7357000BCD95B /* volume.png */; };
 		84C9FB5B1EB4AFB100B393D1 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C9FB571EB4AFB100B393D1 /* Pause.png */; };
 		84C9FB5C1EB4AFB100B393D1 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C9FB581EB4AFB100B393D1 /* back.png */; };
@@ -164,6 +165,7 @@
 		84B374E51EB6DF90005CEBFB /* monocle_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monocle_small.png; sourceTree = "<group>"; };
 		84B374E71EB6DF90005CEBFB /* angry_teacher_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = angry_teacher_small.png; sourceTree = "<group>"; };
 		84BAE6681EBF2FEC00EF50AB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		84C23A551EC7F7E8009AB95E /* SKMultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMultilineLabel.swift; sourceTree = "<group>"; };
 		84C334431EA7357000BCD95B /* volume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = volume.png; path = ../volume.png; sourceTree = "<group>"; };
 		84C9FB571EB4AFB100B393D1 /* Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause.png; sourceTree = "<group>"; };
 		84C9FB581EB4AFB100B393D1 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			children = (
 				841D56AF1EACD83600BF5830 /* GameplayController.swift */,
 				841D56B11EACDC8700BF5830 /* GameManager.swift */,
+				84C23A551EC7F7E8009AB95E /* SKMultilineLabel.swift */,
 			);
 			name = "Game Controllers and Managers";
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 			files = (
 				842932FC1EB0BFF9000803F8 /* Pin.swift in Sources */,
 				8434A8081EA9D4D40007E6CE /* MainMenuScene.swift in Sources */,
+				84C23A561EC7F7E8009AB95E /* SKMultilineLabel.swift in Sources */,
 				8409AF7A1EA77B2A005B1A60 /* GameplayScene.swift in Sources */,
 				846175931EADB5E3001637F0 /* QuestionScene.swift in Sources */,
 				842932FA1EB0BF1A000803F8 /* Science.swift in Sources */,
