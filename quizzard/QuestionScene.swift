@@ -16,29 +16,109 @@ import Foundation
 
 class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
 
-//public let synth = AVSpeechSynthesizer()
+    let synth = AVSpeechSynthesizer()
+    let correctUtterance = AVSpeechUtterance(string: "Correct")
+    let incorrectUtterance = AVSpeechUtterance(string: "Incorrect")
+    var result:Int = 0
+    var narrow = [Questions]()
+    let getScore = GameManager.instance.getScore()
+    let getLives = GameManager.instance.getLives()
     
     override func didMove(to view: SKView) {
-        
+        synth.delegate = self
         let defaults = UserDefaults.standard
         let decode_data = defaults.object(forKey: "Questions") as? Data
         let setup = NSKeyedUnarchiver.unarchiveObject(with: decode_data!) as! [Questions]
         let decode_topic = defaults.object(forKey: "Topic") as? String
-        let filter = setup.filter({$0.topic == decode_topic}) 
-        let qCount = filter.count
-        let result = pickQuestion(input: UInt32(qCount))
-        showData(input: result, filter: filter)
-        RandomQuestions(input: Int(result), filter: filter)
+        narrow = setup.filter({$0.topic == decode_topic})
+        let qCount = narrow.count
+        result = pickQuestion(input: UInt32(qCount))
+        showData(input: result, filter: narrow)
+        RandomQuestions(input: Int(result), filter: narrow)
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         for touch in touches {
             let location = touch.location(in: self)
-            if atPoint(location).name == "settings" {
-                let play_scene = SettingsScene(fileNamed: "SettingsScene")
-                play_scene?.scaleMode = .aspectFill
-                self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+            if atPoint(location).name == "button_a" {
+                synth.stopSpeaking(at: AVSpeechBoundary.word)
+                if (narrow[result].answer == "A") {
+                    GameManager.instance.setScore(score: getScore+100)
+                    synth.speak(correctUtterance)
+                    let play_scene = GameplayScene(fileNamed: "Spin")
+                    play_scene?.scaleMode = .aspectFill
+                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                }
+                else {
+                        synth.stopSpeaking(at: AVSpeechBoundary.word)
+                        synth.speak(incorrectUtterance)
+                        GameManager.instance.setScore(score: getScore-100)
+                        GameManager.instance.setLives(lives: getLives-1)
+                        let play_scene = GameplayScene(fileNamed: "Spin")
+                        play_scene?.scaleMode = .aspectFill
+                        self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                }
+            }
+            if atPoint(location).name == "button_b" {
+                synth.stopSpeaking(at: AVSpeechBoundary.word)
+                if (narrow[result].answer == "B") {
+                    GameManager.instance.setScore(score: getScore+100)
+                    synth.speak(correctUtterance)
+                    let play_scene = GameplayScene(fileNamed: "Spin")
+                    play_scene?.scaleMode = .aspectFill
+                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                }
+                else {
+                    synth.speak(incorrectUtterance)
+                    GameManager.instance.setScore(score: getScore-100)
+                    GameManager.instance.setLives(lives: getLives-1)
+                    let play_scene = GameplayScene(fileNamed: "Spin")
+                    play_scene?.scaleMode = .aspectFill
+                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                }
+                
+            }
+            if atPoint(location).name == "button_c" {
+                synth.stopSpeaking(at: AVSpeechBoundary.word)
+                if (narrow[result].answer == "C") {
+                    GameManager.instance.setScore(score: getScore+100)
+                    synth.speak(correctUtterance)
+                    let play_scene = GameplayScene(fileNamed: "Spin")
+                    play_scene?.scaleMode = .aspectFill
+                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                }
+                else {
+                    synth.speak(incorrectUtterance)
+                    GameManager.instance.setScore(score: getScore-100)
+                    GameManager.instance.setLives(lives: getLives-1)
+                    let play_scene = GameplayScene(fileNamed: "Spin")
+                    play_scene?.scaleMode = .aspectFill
+                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                }
+                
+            }
+            if atPoint(location).name == "button_d" {
+                synth.stopSpeaking(at: AVSpeechBoundary.word)
+                narrow.remove(at: result)
+                if (narrow[result].answer == "D") {
+                    GameManager.instance.setScore(score: getScore+100)
+                    synth.speak(correctUtterance)
+                    let play_scene = GameplayScene(fileNamed: "Spin")
+                    play_scene?.scaleMode = .aspectFill
+                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                }
+                else {
+                    synth.stopSpeaking(at: AVSpeechBoundary.word)
+                    narrow.remove(at: result)
+                    synth.speak(incorrectUtterance)
+                    GameManager.instance.setScore(score: getScore-100)
+                    GameManager.instance.setLives(lives: getLives-1)
+                    let play_scene = GameplayScene(fileNamed: "Spin")
+                    play_scene?.scaleMode = .aspectFill
+                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                }
+                
             }
         }
     }
@@ -48,8 +128,8 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
     
     func RandomQuestions (input:Int, filter:[Questions]) {
         
-        let synth = AVSpeechSynthesizer()
-        synth.delegate = self
+//        let synth = AVSpeechSynthesizer()
+//        synth.delegate = self
         let qUtterance = AVSpeechUtterance(string: filter[input].quest)
         let aUtterance = AVSpeechUtterance(string: filter[input].A)
         let bUtterance = AVSpeechUtterance(string: filter[input].B)
@@ -74,14 +154,8 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
     
     func showData(input: Int, filter: [Questions]) {
         
-        //let question_label = SKLabelNode()
         let question_label = SKMultilineLabel(text: filter[input].quest, labelWidth: 700, pos: CGPoint(x: 0,y: 550))
-     //   question_label.fontName = "Avenir.ttf"
-      //  question_label.fontSize = 30
-     //   question_label.fontColor = UIColor(white: 1, alpha: 1)
-      //  question_label.position = CGPoint(x: 0, y: 400)
         question_label.zPosition = CGFloat(5.0)
-      //  question_label.text = filter[input].quest
         self.addChild(question_label)
         
         let a_label = SKLabelNode()
