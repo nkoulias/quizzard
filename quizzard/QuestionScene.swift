@@ -28,13 +28,16 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         synth.delegate = self
         let defaults = UserDefaults.standard
         let decode_data = defaults.object(forKey: "Questions") as? Data
-        let setup = NSKeyedUnarchiver.unarchiveObject(with: decode_data!) as! [Questions]
+        var setup = NSKeyedUnarchiver.unarchiveObject(with: decode_data!) as! [Questions]
         let decode_topic = defaults.object(forKey: "Topic") as? String
         narrow = setup.filter({$0.topic == decode_topic})
         let qCount = narrow.count
         result = pickQuestion(input: UInt32(qCount))
         showData(input: result, filter: narrow)
         RandomQuestions(input: Int(result), filter: narrow)
+        setup = setup.filter({$0.quest != narrow[result].quest})
+        let encode_data = NSKeyedArchiver.archivedData(withRootObject: setup)
+        defaults.set(encode_data, forKey: "Questions")
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -48,6 +51,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                     synth.speak(correctUtterance)
                     let play_scene = GameplayScene(fileNamed: "Spin")
                     play_scene?.scaleMode = .aspectFill
+                    narrow.remove(at: result)
                     self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
                 }
                 else {
@@ -57,6 +61,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                         GameManager.instance.setLives(lives: getLives-1)
                         let play_scene = GameplayScene(fileNamed: "Spin")
                         play_scene?.scaleMode = .aspectFill
+                        narrow.remove(at: result)
                         self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
                 }
             }
@@ -67,6 +72,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                     synth.speak(correctUtterance)
                     let play_scene = GameplayScene(fileNamed: "Spin")
                     play_scene?.scaleMode = .aspectFill
+                    narrow.remove(at: result)
                     self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
                 }
                 else {
@@ -75,6 +81,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                     GameManager.instance.setLives(lives: getLives-1)
                     let play_scene = GameplayScene(fileNamed: "Spin")
                     play_scene?.scaleMode = .aspectFill
+                    narrow.remove(at: result)
                     self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
                 }
                 
@@ -86,14 +93,17 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                     synth.speak(correctUtterance)
                     let play_scene = GameplayScene(fileNamed: "Spin")
                     play_scene?.scaleMode = .aspectFill
+                    narrow.remove(at: result)
                     self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
                 }
                 else {
+                    narrow.remove(at: result)
                     synth.speak(incorrectUtterance)
                     GameManager.instance.setScore(score: getScore-100)
                     GameManager.instance.setLives(lives: getLives-1)
                     let play_scene = GameplayScene(fileNamed: "Spin")
                     play_scene?.scaleMode = .aspectFill
+                    narrow.remove(at: result)
                     self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
                 }
                 
@@ -106,16 +116,17 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                     synth.speak(correctUtterance)
                     let play_scene = GameplayScene(fileNamed: "Spin")
                     play_scene?.scaleMode = .aspectFill
+                    narrow.remove(at: result)
                     self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
                 }
                 else {
                     synth.stopSpeaking(at: AVSpeechBoundary.word)
-                    narrow.remove(at: result)
                     synth.speak(incorrectUtterance)
                     GameManager.instance.setScore(score: getScore-100)
                     GameManager.instance.setLives(lives: getLives-1)
                     let play_scene = GameplayScene(fileNamed: "Spin")
                     play_scene?.scaleMode = .aspectFill
+                    narrow.remove(at: result)
                     self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
                 }
                 
