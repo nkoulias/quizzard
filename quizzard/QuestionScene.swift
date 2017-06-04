@@ -49,20 +49,21 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 if (narrow[result].answer == "A") {
                     GameManager.instance.setScore(score: getScore+100)
                     synth.speak(correctUtterance)
-                    let play_scene = GameplayScene(fileNamed: "Spin")
-                    play_scene?.scaleMode = .aspectFill
                     narrow.remove(at: result)
-                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                    nextQuestion()
                 }
                 else {
                         synth.stopSpeaking(at: AVSpeechBoundary.word)
                         synth.speak(incorrectUtterance)
+                        narrow.remove(at: result)
                         GameManager.instance.setScore(score: getScore-100)
                         GameManager.instance.setLives(lives: getLives-1)
-                        let play_scene = GameplayScene(fileNamed: "Spin")
-                        play_scene?.scaleMode = .aspectFill
-                        narrow.remove(at: result)
-                        self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                    if (GameManager.instance.getLives() < 1) {
+                        gameOver()
+                    }
+                    else {
+                            nextQuestion()
+                        }
                 }
             }
             if atPoint(location).name == "button_b" {
@@ -70,19 +71,19 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 if (narrow[result].answer == "B") {
                     GameManager.instance.setScore(score: getScore+100)
                     synth.speak(correctUtterance)
-                    let play_scene = GameplayScene(fileNamed: "Spin")
-                    play_scene?.scaleMode = .aspectFill
                     narrow.remove(at: result)
-                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                    nextQuestion()
                 }
                 else {
                     synth.speak(incorrectUtterance)
                     GameManager.instance.setScore(score: getScore-100)
                     GameManager.instance.setLives(lives: getLives-1)
-                    let play_scene = GameplayScene(fileNamed: "Spin")
-                    play_scene?.scaleMode = .aspectFill
                     narrow.remove(at: result)
-                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                    if (GameManager.instance.getLives() < 1) {
+                        gameOver()
+                    } else {
+                        nextQuestion()
+                    }
                 }
                 
             }
@@ -91,43 +92,41 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 if (narrow[result].answer == "C") {
                     GameManager.instance.setScore(score: getScore+100)
                     synth.speak(correctUtterance)
-                    let play_scene = GameplayScene(fileNamed: "Spin")
-                    play_scene?.scaleMode = .aspectFill
                     narrow.remove(at: result)
-                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                    nextQuestion()
                 }
                 else {
                     narrow.remove(at: result)
                     synth.speak(incorrectUtterance)
                     GameManager.instance.setScore(score: getScore-100)
                     GameManager.instance.setLives(lives: getLives-1)
-                    let play_scene = GameplayScene(fileNamed: "Spin")
-                    play_scene?.scaleMode = .aspectFill
-                    narrow.remove(at: result)
-                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                    if (GameManager.instance.getLives() < 1) {
+                        gameOver()
+                    } else {
+                        nextQuestion()
+                    }
                 }
                 
             }
             if atPoint(location).name == "button_d" {
                 synth.stopSpeaking(at: AVSpeechBoundary.word)
-                narrow.remove(at: result)
                 if (narrow[result].answer == "D") {
                     GameManager.instance.setScore(score: getScore+100)
                     synth.speak(correctUtterance)
-                    let play_scene = GameplayScene(fileNamed: "Spin")
-                    play_scene?.scaleMode = .aspectFill
                     narrow.remove(at: result)
-                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                    nextQuestion()
                 }
                 else {
                     synth.stopSpeaking(at: AVSpeechBoundary.word)
                     synth.speak(incorrectUtterance)
                     GameManager.instance.setScore(score: getScore-100)
                     GameManager.instance.setLives(lives: getLives-1)
-                    let play_scene = GameplayScene(fileNamed: "Spin")
-                    play_scene?.scaleMode = .aspectFill
                     narrow.remove(at: result)
-                    self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+                    if (GameManager.instance.getLives() < 1) {
+                        gameOver()
+                    } else {
+                        nextQuestion()
+                    }
                 }
                 
             }
@@ -138,9 +137,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
     }
     
     func RandomQuestions (input:Int, filter:[Questions]) {
-        
-//        let synth = AVSpeechSynthesizer()
-//        synth.delegate = self
+
         let qUtterance = AVSpeechUtterance(string: filter[input].quest)
         let aUtterance = AVSpeechUtterance(string: filter[input].A)
         let bUtterance = AVSpeechUtterance(string: filter[input].B)
@@ -158,7 +155,6 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         synth.speak(cUtterance)
         cUtterance.postUtteranceDelay = 0.1
         synth.speak(orUtterance)
-        //orUtterance.postUtteranceDelay = 0.1
         synth.speak(dUtterance)
         
     }
@@ -177,7 +173,6 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         a_label.zPosition = CGFloat(5.0)
         a_label.text = filter[input].A
         self.addChild(a_label)
-        
         let b_label = SKLabelNode()
         b_label.fontName = "Avenir.ttf"
         b_label.fontSize = 38
@@ -186,7 +181,6 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         b_label.zPosition = CGFloat(5.0)
         b_label.text = filter[input].B
         self.addChild(b_label)
-        
         let c_label = SKLabelNode()
         c_label.fontName = "Avenir.ttf"
         c_label.fontSize = 38
@@ -195,7 +189,6 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         c_label.zPosition = CGFloat(5.0)
         c_label.text = filter[input].C
         self.addChild(c_label)
-        
         let d_label = SKLabelNode()
         d_label.fontName = "Avenir.ttf"
         d_label.fontSize = 38
@@ -205,5 +198,15 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         d_label.text = filter[input].D
         self.addChild(d_label)
         
+    }
+    func gameOver() {
+        let play_scene = GameOverScene(fileNamed: "GameOver")
+        play_scene?.scaleMode = .aspectFill
+        self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+    }
+    func nextQuestion() {
+        let play_scene = GameplayScene(fileNamed: "Spin")
+        play_scene?.scaleMode = .aspectFill
+        self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
     }
 }

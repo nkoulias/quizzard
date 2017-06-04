@@ -39,7 +39,9 @@
 		84334F691EA37D8300609913 /* monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F631EA37D8300609913 /* monster.png */; };
 		84334F6B1EA385F500609913 /* intro_character.png in Resources */ = {isa = PBXBuildFile; fileRef = 84334F6A1EA385F500609913 /* intro_character.png */; };
 		84334F6D1EA3884B00609913 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 84334F6C1EA3884B00609913 /* AppIcon.appiconset */; };
+		843388D11EE3881400ACD338 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843388D01EE3881400ACD338 /* GameOverScene.swift */; };
 		8434A8081EA9D4D40007E6CE /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434A8071EA9D4D40007E6CE /* MainMenuScene.swift */; };
+		843F0D981EE2CC6B00C19222 /* GameOver.sks in Resources */ = {isa = PBXBuildFile; fileRef = 843F0D971EE2CC6B00C19222 /* GameOver.sks */; };
 		8446C1E61EAD89950008042A /* CharacterSelectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446C1E51EAD89950008042A /* CharacterSelectScene.swift */; };
 		84489F311EB5FC2B003A5C08 /* No Sound.png in Resources */ = {isa = PBXBuildFile; fileRef = 84489F2B1EB5FC2B003A5C08 /* No Sound.png */; };
 		84489F321EB5FC2B003A5C08 /* Sound On.png in Resources */ = {isa = PBXBuildFile; fileRef = 84489F2C1EB5FC2B003A5C08 /* Sound On.png */; };
@@ -50,6 +52,9 @@
 		84489F381EB604A5003A5C08 /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84489F371EB604A5003A5C08 /* SettingsScene.swift */; };
 		844D51861EC26373008F51BE /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D51851EC26373008F51BE /* Questions.swift */; };
 		846175931EADB5E3001637F0 /* QuestionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846175921EADB5E3001637F0 /* QuestionScene.swift */; };
+		84678C301EE211C5003A363B /* Panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 84678C2D1EE211C5003A363B /* Panel.png */; };
+		84678C311EE211C5003A363B /* Quit.png in Resources */ = {isa = PBXBuildFile; fileRef = 84678C2E1EE211C5003A363B /* Quit.png */; };
+		84678C321EE211C5003A363B /* Play_again.png in Resources */ = {isa = PBXBuildFile; fileRef = 84678C2F1EE211C5003A363B /* Play_again.png */; };
 		846D100F1EB1E836008BBD36 /* geography_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100B1EB1E836008BBD36 /* geography_selection.png */; };
 		846D10101EB1E836008BBD36 /* history_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100C1EB1E836008BBD36 /* history_selection.png */; };
 		846D10111EB1E836008BBD36 /* maths_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100D1EB1E836008BBD36 /* maths_selection.png */; };
@@ -123,7 +128,9 @@
 		84334F631EA37D8300609913 /* monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster.png; sourceTree = "<group>"; };
 		84334F6A1EA385F500609913 /* intro_character.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro_character.png; sourceTree = "<group>"; };
 		84334F6C1EA3884B00609913 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
+		843388D01EE3881400ACD338 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		8434A8071EA9D4D40007E6CE /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		843F0D971EE2CC6B00C19222 /* GameOver.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOver.sks; sourceTree = "<group>"; };
 		8446C1E51EAD89950008042A /* CharacterSelectScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSelectScene.swift; sourceTree = "<group>"; };
 		84489F2B1EB5FC2B003A5C08 /* No Sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "No Sound.png"; sourceTree = "<group>"; };
 		84489F2C1EB5FC2B003A5C08 /* Sound On.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sound On.png"; sourceTree = "<group>"; };
@@ -134,6 +141,9 @@
 		84489F371EB604A5003A5C08 /* SettingsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
 		844D51851EC26373008F51BE /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		846175921EADB5E3001637F0 /* QuestionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionScene.swift; sourceTree = "<group>"; };
+		84678C2D1EE211C5003A363B /* Panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Panel.png; sourceTree = "<group>"; };
+		84678C2E1EE211C5003A363B /* Quit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Quit.png; sourceTree = "<group>"; };
+		84678C2F1EE211C5003A363B /* Play_again.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Play_again.png; sourceTree = "<group>"; };
 		846D100B1EB1E836008BBD36 /* geography_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geography_selection.png; sourceTree = "<group>"; };
 		846D100C1EB1E836008BBD36 /* history_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history_selection.png; sourceTree = "<group>"; };
 		846D100D1EB1E836008BBD36 /* maths_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maths_selection.png; sourceTree = "<group>"; };
@@ -211,6 +221,7 @@
 				8446C1E51EAD89950008042A /* CharacterSelectScene.swift */,
 				846175921EADB5E3001637F0 /* QuestionScene.swift */,
 				84489F371EB604A5003A5C08 /* SettingsScene.swift */,
+				843388D01EE3881400ACD338 /* GameOverScene.swift */,
 			);
 			name = "Scene Classes";
 			sourceTree = "<group>";
@@ -282,6 +293,16 @@
 			name = "Settings Assets";
 			sourceTree = "<group>";
 		};
+		84794BBD1EE1992A00200320 /* Game Over Assets */ = {
+			isa = PBXGroup;
+			children = (
+				84678C2D1EE211C5003A363B /* Panel.png */,
+				84678C2E1EE211C5003A363B /* Quit.png */,
+				84678C2F1EE211C5003A363B /* Play_again.png */,
+			);
+			name = "Game Over Assets";
+			sourceTree = "<group>";
+		};
 		848B9C841EB82A830071C42F /* Game Data Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +351,7 @@
 		849E0DB21E8D16B600BDDC0A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				84794BBD1EE1992A00200320 /* Game Over Assets */,
 				841D68A21EC6C6BD00414016 /* Questions Assets */,
 				84B374E01EB6CC21005CEBFB /* Lives Assets */,
 				84489F2A1EB5FC1B003A5C08 /* Settings Assets */,
@@ -410,6 +432,7 @@
 		84D083631EA23CB40030A66A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				843F0D971EE2CC6B00C19222 /* GameOver.sks */,
 				84CA387E1EB36DC8001941C1 /* QuestionScene.sks */,
 				8484C8C81EA70184003117CE /* CharacterSelect.sks */,
 				84D083641EA23CFF0030A66A /* MainMenu.sks */,
@@ -501,6 +524,7 @@
 			files = (
 				84D083651EA23CFF0030A66A /* MainMenu.sks in Resources */,
 				840DE07F1EB7116B003AF2FC /* octopus_small.png in Resources */,
+				84678C301EE211C5003A363B /* Panel.png in Resources */,
 				841CA2F21EA7095D00C2ACBD /* angry_teacher.png in Resources */,
 				84334F691EA37D8300609913 /* monster.png in Resources */,
 				8484C8C51EA7010E003117CE /* purple_cutey.png in Resources */,
@@ -516,7 +540,9 @@
 				84334F681EA37D8300609913 /* menu_bar_bottom.png in Resources */,
 				841D68AA1EC6C6CE00414016 /* button_a.png in Resources */,
 				84B374EC1EB6DF90005CEBFB /* monocle_small.png in Resources */,
+				84678C311EE211C5003A363B /* Quit.png in Resources */,
 				8484C8BD1EA700D2003117CE /* single_eye_green.png in Resources */,
+				843F0D981EE2CC6B00C19222 /* GameOver.sks in Resources */,
 				846D10101EB1E836008BBD36 /* history_selection.png in Resources */,
 				84B374E81EB6DF90005CEBFB /* single_eye_green_small.png in Resources */,
 				840DE0801EB7116B003AF2FC /* green_monster_small.png in Resources */,
@@ -551,6 +577,7 @@
 				8412DC631EB20ED300CD9BCC /* science_selection.png in Resources */,
 				84B374EE1EB6DF90005CEBFB /* angry_teacher_small.png in Resources */,
 				84D589451EC6CCB100FF221C /* quizzard.xcworkspace in Resources */,
+				84678C321EE211C5003A363B /* Play_again.png in Resources */,
 				8412DC651EB20EF600CD9BCC /* Spin.sks in Resources */,
 				841D68A81EC6C6CE00414016 /* button_c.png in Resources */,
 				84334F661EA37D8300609913 /* title.png in Resources */,
@@ -627,6 +654,7 @@
 				848B9C881EB82AAA0071C42F /* GameData.swift in Sources */,
 				841D56B01EACD83600BF5830 /* GameplayController.swift in Sources */,
 				842932F61EB0BEDE000803F8 /* History.swift in Sources */,
+				843388D11EE3881400ACD338 /* GameOverScene.swift in Sources */,
 				844D51861EC26373008F51BE /* Questions.swift in Sources */,
 				849E0DA31E8D162E00BDDC0A /* GameViewController.swift in Sources */,
 				841D56B21EACDC8700BF5830 /* GameManager.swift in Sources */,
