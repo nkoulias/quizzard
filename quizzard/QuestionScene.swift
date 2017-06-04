@@ -56,7 +56,9 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                         synth.stopSpeaking(at: AVSpeechBoundary.word)
                         synth.speak(incorrectUtterance)
                         narrow.remove(at: result)
+                    if (GameManager.instance.getScore() > 0){
                         GameManager.instance.setScore(score: getScore-100)
+                    }
                         GameManager.instance.setLives(lives: getLives-1)
                     if (GameManager.instance.getLives() < 1) {
                         gameOver()
@@ -76,7 +78,9 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 }
                 else {
                     synth.speak(incorrectUtterance)
-                    GameManager.instance.setScore(score: getScore-100)
+                    if (GameManager.instance.getScore() > 0){
+                        GameManager.instance.setScore(score: getScore-100)
+                    }
                     GameManager.instance.setLives(lives: getLives-1)
                     narrow.remove(at: result)
                     if (GameManager.instance.getLives() < 1) {
@@ -98,7 +102,9 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 else {
                     narrow.remove(at: result)
                     synth.speak(incorrectUtterance)
-                    GameManager.instance.setScore(score: getScore-100)
+                    if (GameManager.instance.getScore() > 0){
+                        GameManager.instance.setScore(score: getScore-100)
+                    }
                     GameManager.instance.setLives(lives: getLives-1)
                     if (GameManager.instance.getLives() < 1) {
                         gameOver()
@@ -119,7 +125,9 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 else {
                     synth.stopSpeaking(at: AVSpeechBoundary.word)
                     synth.speak(incorrectUtterance)
-                    GameManager.instance.setScore(score: getScore-100)
+                    if (GameManager.instance.getScore() > 0){
+                        GameManager.instance.setScore(score: getScore-100)
+                    }
                     GameManager.instance.setLives(lives: getLives-1)
                     narrow.remove(at: result)
                     if (GameManager.instance.getLives() < 1) {

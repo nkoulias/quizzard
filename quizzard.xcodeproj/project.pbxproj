@@ -52,7 +52,6 @@
 		84489F381EB604A5003A5C08 /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84489F371EB604A5003A5C08 /* SettingsScene.swift */; };
 		844D51861EC26373008F51BE /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D51851EC26373008F51BE /* Questions.swift */; };
 		846175931EADB5E3001637F0 /* QuestionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846175921EADB5E3001637F0 /* QuestionScene.swift */; };
-		84678C301EE211C5003A363B /* Panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 84678C2D1EE211C5003A363B /* Panel.png */; };
 		84678C311EE211C5003A363B /* Quit.png in Resources */ = {isa = PBXBuildFile; fileRef = 84678C2E1EE211C5003A363B /* Quit.png */; };
 		84678C321EE211C5003A363B /* Play_again.png in Resources */ = {isa = PBXBuildFile; fileRef = 84678C2F1EE211C5003A363B /* Play_again.png */; };
 		846D100F1EB1E836008BBD36 /* geography_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100B1EB1E836008BBD36 /* geography_selection.png */; };
@@ -92,6 +91,7 @@
 		84CA387F1EB36DC8001941C1 /* QuestionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84CA387E1EB36DC8001941C1 /* QuestionScene.sks */; };
 		84D083651EA23CFF0030A66A /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84D083641EA23CFF0030A66A /* MainMenu.sks */; };
 		84D589451EC6CCB100FF221C /* quizzard.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 84D589441EC6CCB100FF221C /* quizzard.xcworkspace */; };
+		84DED8F51EE3ADD300CD393B /* Panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 84DED8F41EE3ADD300CD393B /* Panel.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,7 +141,6 @@
 		84489F371EB604A5003A5C08 /* SettingsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
 		844D51851EC26373008F51BE /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		846175921EADB5E3001637F0 /* QuestionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionScene.swift; sourceTree = "<group>"; };
-		84678C2D1EE211C5003A363B /* Panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Panel.png; sourceTree = "<group>"; };
 		84678C2E1EE211C5003A363B /* Quit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Quit.png; sourceTree = "<group>"; };
 		84678C2F1EE211C5003A363B /* Play_again.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Play_again.png; sourceTree = "<group>"; };
 		846D100B1EB1E836008BBD36 /* geography_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geography_selection.png; sourceTree = "<group>"; };
@@ -186,6 +185,7 @@
 		84CA387E1EB36DC8001941C1 /* QuestionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = QuestionScene.sks; sourceTree = "<group>"; };
 		84D083641EA23CFF0030A66A /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 		84D589441EC6CCB100FF221C /* quizzard.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = quizzard.xcworkspace; sourceTree = "<group>"; };
+		84DED8F41EE3ADD300CD393B /* Panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Panel.png; sourceTree = "<group>"; };
 		DF652B97EF3CE01A978B6F54 /* Pods-quizzard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quizzard/Pods-quizzard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -296,7 +296,7 @@
 		84794BBD1EE1992A00200320 /* Game Over Assets */ = {
 			isa = PBXGroup;
 			children = (
-				84678C2D1EE211C5003A363B /* Panel.png */,
+				84DED8F41EE3ADD300CD393B /* Panel.png */,
 				84678C2E1EE211C5003A363B /* Quit.png */,
 				84678C2F1EE211C5003A363B /* Play_again.png */,
 			);
@@ -524,7 +524,6 @@
 			files = (
 				84D083651EA23CFF0030A66A /* MainMenu.sks in Resources */,
 				840DE07F1EB7116B003AF2FC /* octopus_small.png in Resources */,
-				84678C301EE211C5003A363B /* Panel.png in Resources */,
 				841CA2F21EA7095D00C2ACBD /* angry_teacher.png in Resources */,
 				84334F691EA37D8300609913 /* monster.png in Resources */,
 				8484C8C51EA7010E003117CE /* purple_cutey.png in Resources */,
@@ -578,6 +577,7 @@
 				84B374EE1EB6DF90005CEBFB /* angry_teacher_small.png in Resources */,
 				84D589451EC6CCB100FF221C /* quizzard.xcworkspace in Resources */,
 				84678C321EE211C5003A363B /* Play_again.png in Resources */,
+				84DED8F51EE3ADD300CD393B /* Panel.png in Resources */,
 				8412DC651EB20EF600CD9BCC /* Spin.sks in Resources */,
 				841D68A81EC6C6CE00414016 /* button_c.png in Resources */,
 				84334F661EA37D8300609913 /* title.png in Resources */,
