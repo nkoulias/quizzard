@@ -13,6 +13,8 @@
 		840DE0801EB7116B003AF2FC /* green_monster_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 840DE07E1EB7116B003AF2FC /* green_monster_small.png */; };
 		8412DC631EB20ED300CD9BCC /* science_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 8412DC621EB20ED300CD9BCC /* science_selection.png */; };
 		8412DC651EB20EF600CD9BCC /* Spin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8412DC641EB20EF600CD9BCC /* Spin.sks */; };
+		841C50061EE8295000B6A583 /* clicks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 841C50051EE8295000B6A583 /* clicks.mp3 */; };
+		841C50081EE82A6800B6A583 /* clicker.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 841C50071EE82A6800B6A583 /* clicker.m4a */; };
 		841CA2F21EA7095D00C2ACBD /* angry_teacher.png in Resources */ = {isa = PBXBuildFile; fileRef = 841CA2F11EA7095D00C2ACBD /* angry_teacher.png */; };
 		841D56B01EACD83600BF5830 /* GameplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D56AF1EACD83600BF5830 /* GameplayController.swift */; };
 		841D56B21EACDC8700BF5830 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D56B11EACDC8700BF5830 /* GameManager.swift */; };
@@ -72,6 +74,8 @@
 		849E0DA61E8D162E00BDDC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E0DA41E8D162E00BDDC0A /* Main.storyboard */; };
 		849E0DA81E8D162E00BDDC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849E0DA71E8D162E00BDDC0A /* Assets.xcassets */; };
 		849E0DAB1E8D162E00BDDC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849E0DA91E8D162E00BDDC0A /* LaunchScreen.storyboard */; };
+		84AB3C961EE97591006D047A /* clicker.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84AB3C951EE97591006D047A /* clicker.wav */; };
+		84AB3C981EE97778006D047A /* last_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84AB3C971EE97778006D047A /* last_sound.wav */; };
 		84AB6ECA1EB4B5DB00C44FEA /* Spin.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AB6EC91EB4B5DB00C44FEA /* Spin.png */; };
 		84AB6ECC1EB4B72D00C44FEA /* SettingsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84AB6ECB1EB4B72D00C44FEA /* SettingsScene.sks */; };
 		84ABD21F1EAA3C7B006374A8 /* blow.normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84ABD21E1EAA3C7B006374A8 /* blow.normal.ttf */; };
@@ -92,6 +96,7 @@
 		84D083651EA23CFF0030A66A /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84D083641EA23CFF0030A66A /* MainMenu.sks */; };
 		84D589451EC6CCB100FF221C /* quizzard.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 84D589441EC6CCB100FF221C /* quizzard.xcworkspace */; };
 		84DED8F51EE3ADD300CD393B /* Panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 84DED8F41EE3ADD300CD393B /* Panel.png */; };
+		84EA88791EE81D2900C6393D /* click.mov in Resources */ = {isa = PBXBuildFile; fileRef = 84EA88781EE81D2900C6393D /* click.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +107,8 @@
 		840DE07E1EB7116B003AF2FC /* green_monster_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_monster_small.png; sourceTree = "<group>"; };
 		8412DC621EB20ED300CD9BCC /* science_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = science_selection.png; sourceTree = "<group>"; };
 		8412DC641EB20EF600CD9BCC /* Spin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Spin.sks; sourceTree = "<group>"; };
+		841C50051EE8295000B6A583 /* clicks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clicks.mp3; sourceTree = "<group>"; };
+		841C50071EE82A6800B6A583 /* clicker.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = clicker.m4a; sourceTree = "<group>"; };
 		841CA2F11EA7095D00C2ACBD /* angry_teacher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = angry_teacher.png; path = ../angry_teacher.png; sourceTree = "<group>"; };
 		841D56AF1EACD83600BF5830 /* GameplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayController.swift; sourceTree = "<group>"; };
 		841D56B11EACDC8700BF5830 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; usesTabs = 1; };
@@ -164,6 +171,8 @@
 		849E0DAA1E8D162E00BDDC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		849E0DAC1E8D162E00BDDC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A1C2B01EBDF39F009E2445 /* quizzard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = quizzard.entitlements; sourceTree = "<group>"; };
+		84AB3C951EE97591006D047A /* clicker.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clicker.wav; sourceTree = "<group>"; };
+		84AB3C971EE97778006D047A /* last_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = last_sound.wav; sourceTree = "<group>"; };
 		84AB6EC91EB4B5DB00C44FEA /* Spin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spin.png; sourceTree = "<group>"; };
 		84AB6ECB1EB4B72D00C44FEA /* SettingsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SettingsScene.sks; sourceTree = "<group>"; };
 		84ABD21E1EAA3C7B006374A8 /* blow.normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blow.normal.ttf; sourceTree = "<group>"; };
@@ -186,6 +195,7 @@
 		84D083641EA23CFF0030A66A /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 		84D589441EC6CCB100FF221C /* quizzard.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = quizzard.xcworkspace; sourceTree = "<group>"; };
 		84DED8F41EE3ADD300CD393B /* Panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Panel.png; sourceTree = "<group>"; };
+		84EA88781EE81D2900C6393D /* click.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = click.mov; sourceTree = "<group>"; };
 		DF652B97EF3CE01A978B6F54 /* Pods-quizzard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quizzard/Pods-quizzard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -351,6 +361,7 @@
 		849E0DB21E8D16B600BDDC0A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				84EA88771EE81D0100C6393D /* Sounds */,
 				84794BBD1EE1992A00200320 /* Game Over Assets */,
 				841D68A21EC6C6BD00414016 /* Questions Assets */,
 				84B374E01EB6CC21005CEBFB /* Lives Assets */,
@@ -442,6 +453,18 @@
 			name = Scenes;
 			sourceTree = "<group>";
 		};
+		84EA88771EE81D0100C6393D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				84AB3C971EE97778006D047A /* last_sound.wav */,
+				84AB3C951EE97591006D047A /* clicker.wav */,
+				841C50071EE82A6800B6A583 /* clicker.m4a */,
+				841C50051EE8295000B6A583 /* clicks.mp3 */,
+				84EA88781EE81D2900C6393D /* click.mov */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		B8719203818C9140A813F3FD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,7 +548,9 @@
 				84D083651EA23CFF0030A66A /* MainMenu.sks in Resources */,
 				840DE07F1EB7116B003AF2FC /* octopus_small.png in Resources */,
 				841CA2F21EA7095D00C2ACBD /* angry_teacher.png in Resources */,
+				84EA88791EE81D2900C6393D /* click.mov in Resources */,
 				84334F691EA37D8300609913 /* monster.png in Resources */,
+				841C50061EE8295000B6A583 /* clicks.mp3 in Resources */,
 				8484C8C51EA7010E003117CE /* purple_cutey.png in Resources */,
 				84334F6B1EA385F500609913 /* intro_character.png in Resources */,
 				841D68A71EC6C6CE00414016 /* button_d.png in Resources */,
@@ -567,6 +592,7 @@
 				84C334451EA7357000BCD95B /* volume.png in Resources */,
 				84489F351EB5FC2B003A5C08 /* SA.png in Resources */,
 				84B374EA1EB6DF90005CEBFB /* party_animal_small.png in Resources */,
+				84AB3C961EE97591006D047A /* clicker.wav in Resources */,
 				849E0D9F1E8D162E00BDDC0A /* Actions.sks in Resources */,
 				8484C8C11EA700EF003117CE /* octopus.png in Resources */,
 				84489F341EB5FC2B003A5C08 /* IE.png in Resources */,
@@ -579,7 +605,9 @@
 				84678C321EE211C5003A363B /* Play_again.png in Resources */,
 				84DED8F51EE3ADD300CD393B /* Panel.png in Resources */,
 				8412DC651EB20EF600CD9BCC /* Spin.sks in Resources */,
+				84AB3C981EE97778006D047A /* last_sound.wav in Resources */,
 				841D68A81EC6C6CE00414016 /* button_c.png in Resources */,
+				841C50081EE82A6800B6A583 /* clicker.m4a in Resources */,
 				84334F661EA37D8300609913 /* title.png in Resources */,
 				8484C8C91EA70184003117CE /* CharacterSelect.sks in Resources */,
 				84C9FB5C1EB4AFB100B393D1 /* back.png in Resources */,

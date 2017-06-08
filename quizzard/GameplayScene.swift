@@ -8,8 +8,10 @@
 
 import SpriteKit
 import GameplayKit
+import AVFoundation
+import AudioToolbox
 
-class GameplayScene: SKScene, SKPhysicsContactDelegate {
+class GameplayScene: SKScene, SKPhysicsContactDelegate, AVSpeechSynthesizerDelegate {
     
     private var player: Player?
     private var maths: Maths?
@@ -19,6 +21,9 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     var pin: Pin?
     public var topic :String = ""
     public var finishedRotation: Bool = false
+    var SoundEffect: AVAudioPlayer!
+    var sound: SystemSoundID = 0
+    
     
     override func didMove(to view: SKView) {
         
@@ -52,6 +57,9 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
             let location = touch.location(in: self)
             //Start spinning the wheel
             if atPoint(location).name == "play_button" {
+                let hornSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "last_sound", ofType: "wav")!)
+                
+                AudioServicesCreateSystemSoundID(hornSound, &self.sound)
                 player?.physicsBody?.angularVelocity = 0
                 player?.rotatePlayer()
                 
@@ -84,6 +92,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     func didBegin(_ contact: SKPhysicsContact) {
+        
         let defaults = UserDefaults.standard
         var firstBody = SKPhysicsBody()
         var secondBody = SKPhysicsBody()
@@ -97,15 +106,19 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         if (firstBody.node?.name == "pin" && secondBody.node?.name == "geography") {
             let set_topic = secondBody.node?.name
             defaults.set(set_topic, forKey: "Topic")
+            AudioServicesPlaySystemSound(self.sound)
         } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "maths") {
             let set_topic = secondBody.node?.name
             defaults.set(set_topic, forKey: "Topic")
+            AudioServicesPlaySystemSound(self.sound)
         } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "history") {
             let set_topic = secondBody.node?.name
             defaults.set(set_topic, forKey: "Topic")
+            AudioServicesPlaySystemSound(self.sound)
         } else if (firstBody.node?.name == "pin" && secondBody.node?.name == "science") {
             let set_topic = secondBody.node?.name
             defaults.set(set_topic, forKey: "Topic")
+            AudioServicesPlaySystemSound(self.sound)
         }
     }
 }
