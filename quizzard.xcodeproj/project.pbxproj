@@ -11,7 +11,6 @@
 		8409AF7D1EA77F08005B1A60 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409AF7C1EA77F08005B1A60 /* Player.swift */; };
 		840DE07F1EB7116B003AF2FC /* octopus_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 840DE07D1EB7116B003AF2FC /* octopus_small.png */; };
 		840DE0801EB7116B003AF2FC /* green_monster_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 840DE07E1EB7116B003AF2FC /* green_monster_small.png */; };
-		8412DC631EB20ED300CD9BCC /* science_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 8412DC621EB20ED300CD9BCC /* science_selection.png */; };
 		8412DC651EB20EF600CD9BCC /* Spin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8412DC641EB20EF600CD9BCC /* Spin.sks */; };
 		841C50061EE8295000B6A583 /* clicks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 841C50051EE8295000B6A583 /* clicks.mp3 */; };
 		841C50081EE82A6800B6A583 /* clicker.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 841C50071EE82A6800B6A583 /* clicker.m4a */; };
@@ -56,9 +55,6 @@
 		846175931EADB5E3001637F0 /* QuestionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846175921EADB5E3001637F0 /* QuestionScene.swift */; };
 		84678C311EE211C5003A363B /* Quit.png in Resources */ = {isa = PBXBuildFile; fileRef = 84678C2E1EE211C5003A363B /* Quit.png */; };
 		84678C321EE211C5003A363B /* Play_again.png in Resources */ = {isa = PBXBuildFile; fileRef = 84678C2F1EE211C5003A363B /* Play_again.png */; };
-		846D100F1EB1E836008BBD36 /* geography_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100B1EB1E836008BBD36 /* geography_selection.png */; };
-		846D10101EB1E836008BBD36 /* history_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100C1EB1E836008BBD36 /* history_selection.png */; };
-		846D10111EB1E836008BBD36 /* maths_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 846D100D1EB1E836008BBD36 /* maths_selection.png */; };
 		84741BDE1EB2DD59008B0B34 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84741BDD1EB2DD59008B0B34 /* Geo.swift */; };
 		8484C8BB1EA700C2003117CE /* green_monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BA1EA700C2003117CE /* green_monster.png */; };
 		8484C8BD1EA700D2003117CE /* single_eye_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 8484C8BC1EA700D2003117CE /* single_eye_green.png */; };
@@ -85,6 +81,10 @@
 		84B374EA1EB6DF90005CEBFB /* party_animal_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B374E31EB6DF90005CEBFB /* party_animal_small.png */; };
 		84B374EC1EB6DF90005CEBFB /* monocle_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B374E51EB6DF90005CEBFB /* monocle_small.png */; };
 		84B374EE1EB6DF90005CEBFB /* angry_teacher_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B374E71EB6DF90005CEBFB /* angry_teacher_small.png */; };
+		84B769221EEBEF2300F7FB71 /* geography_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7691E1EEBEF2300F7FB71 /* geography_selection.png */; };
+		84B769231EEBEF2300F7FB71 /* history_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7691F1EEBEF2300F7FB71 /* history_selection.png */; };
+		84B769241EEBEF2300F7FB71 /* maths_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B769201EEBEF2300F7FB71 /* maths_selection.png */; };
+		84B769251EEBEF2300F7FB71 /* science_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B769211EEBEF2300F7FB71 /* science_selection.png */; };
 		84BAE6691EBF2FEC00EF50AB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BAE6681EBF2FEC00EF50AB /* CloudKit.framework */; };
 		84C23A561EC7F7E8009AB95E /* SKMultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C23A551EC7F7E8009AB95E /* SKMultilineLabel.swift */; };
 		84C334451EA7357000BCD95B /* volume.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C334431EA7357000BCD95B /* volume.png */; };
@@ -105,7 +105,6 @@
 		8409AF7C1EA77F08005B1A60 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		840DE07D1EB7116B003AF2FC /* octopus_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = octopus_small.png; sourceTree = "<group>"; };
 		840DE07E1EB7116B003AF2FC /* green_monster_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_monster_small.png; sourceTree = "<group>"; };
-		8412DC621EB20ED300CD9BCC /* science_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = science_selection.png; sourceTree = "<group>"; };
 		8412DC641EB20EF600CD9BCC /* Spin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Spin.sks; sourceTree = "<group>"; };
 		841C50051EE8295000B6A583 /* clicks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clicks.mp3; sourceTree = "<group>"; };
 		841C50071EE82A6800B6A583 /* clicker.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = clicker.m4a; sourceTree = "<group>"; };
@@ -150,9 +149,6 @@
 		846175921EADB5E3001637F0 /* QuestionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionScene.swift; sourceTree = "<group>"; };
 		84678C2E1EE211C5003A363B /* Quit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Quit.png; sourceTree = "<group>"; };
 		84678C2F1EE211C5003A363B /* Play_again.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Play_again.png; sourceTree = "<group>"; };
-		846D100B1EB1E836008BBD36 /* geography_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geography_selection.png; sourceTree = "<group>"; };
-		846D100C1EB1E836008BBD36 /* history_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history_selection.png; sourceTree = "<group>"; };
-		846D100D1EB1E836008BBD36 /* maths_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maths_selection.png; sourceTree = "<group>"; };
 		84741BDD1EB2DD59008B0B34 /* Geo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
 		8484C8BA1EA700C2003117CE /* green_monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_monster.png; sourceTree = "<group>"; };
 		8484C8BC1EA700D2003117CE /* single_eye_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = single_eye_green.png; sourceTree = "<group>"; };
@@ -182,6 +178,10 @@
 		84B374E31EB6DF90005CEBFB /* party_animal_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = party_animal_small.png; sourceTree = "<group>"; };
 		84B374E51EB6DF90005CEBFB /* monocle_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monocle_small.png; sourceTree = "<group>"; };
 		84B374E71EB6DF90005CEBFB /* angry_teacher_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = angry_teacher_small.png; sourceTree = "<group>"; };
+		84B7691E1EEBEF2300F7FB71 /* geography_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geography_selection.png; sourceTree = "<group>"; };
+		84B7691F1EEBEF2300F7FB71 /* history_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history_selection.png; sourceTree = "<group>"; };
+		84B769201EEBEF2300F7FB71 /* maths_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maths_selection.png; sourceTree = "<group>"; };
+		84B769211EEBEF2300F7FB71 /* science_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = science_selection.png; sourceTree = "<group>"; };
 		84BAE6681EBF2FEC00EF50AB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		84C23A551EC7F7E8009AB95E /* SKMultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMultilineLabel.swift; sourceTree = "<group>"; };
 		84C334431EA7357000BCD95B /* volume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = volume.png; path = ../volume.png; sourceTree = "<group>"; };
@@ -273,10 +273,10 @@
 		8428D7D01EA8EA4D00B4141D /* Play Assets */ = {
 			isa = PBXGroup;
 			children = (
-				8412DC621EB20ED300CD9BCC /* science_selection.png */,
-				846D100B1EB1E836008BBD36 /* geography_selection.png */,
-				846D100C1EB1E836008BBD36 /* history_selection.png */,
-				846D100D1EB1E836008BBD36 /* maths_selection.png */,
+				84B7691E1EEBEF2300F7FB71 /* geography_selection.png */,
+				84B7691F1EEBEF2300F7FB71 /* history_selection.png */,
+				84B769201EEBEF2300F7FB71 /* maths_selection.png */,
+				84B769211EEBEF2300F7FB71 /* science_selection.png */,
 				84B2CE771EA8F80D00C00BDE /* pin.png */,
 				8428D7E31EA8EF9900B4141D /* Maths.png */,
 				8428D7E11EA8EC0100B4141D /* History.png */,
@@ -563,11 +563,11 @@
 				8428D7DE1EA8EA7A00B4141D /* Geography.png in Resources */,
 				84334F681EA37D8300609913 /* menu_bar_bottom.png in Resources */,
 				841D68AA1EC6C6CE00414016 /* button_a.png in Resources */,
+				84B769241EEBEF2300F7FB71 /* maths_selection.png in Resources */,
 				84B374EC1EB6DF90005CEBFB /* monocle_small.png in Resources */,
 				84678C311EE211C5003A363B /* Quit.png in Resources */,
 				8484C8BD1EA700D2003117CE /* single_eye_green.png in Resources */,
 				843F0D981EE2CC6B00C19222 /* GameOver.sks in Resources */,
-				846D10101EB1E836008BBD36 /* history_selection.png in Resources */,
 				84B374E81EB6DF90005CEBFB /* single_eye_green_small.png in Resources */,
 				840DE0801EB7116B003AF2FC /* green_monster_small.png in Resources */,
 				84AB6ECC1EB4B72D00C44FEA /* SettingsScene.sks in Resources */,
@@ -581,13 +581,13 @@
 				84C9FB5D1EB4AFB100B393D1 /* Settings.png in Resources */,
 				8428D7D91EA8EA7A00B4141D /* selection_pin.png in Resources */,
 				84334F641EA37D8300609913 /* bg.png in Resources */,
-				846D10111EB1E836008BBD36 /* maths_selection.png in Resources */,
 				84ABD21F1EAA3C7B006374A8 /* blow.normal.ttf in Resources */,
 				84334F671EA37D8300609913 /* text.png in Resources */,
 				84489F311EB5FC2B003A5C08 /* No Sound.png in Resources */,
 				84489F321EB5FC2B003A5C08 /* Sound On.png in Resources */,
 				849E0DAB1E8D162E00BDDC0A /* LaunchScreen.storyboard in Resources */,
 				8428D7DD1EA8EA7A00B4141D /* centre_oval.png in Resources */,
+				84B769221EEBEF2300F7FB71 /* geography_selection.png in Resources */,
 				84C9FB5B1EB4AFB100B393D1 /* Pause.png in Resources */,
 				84C334451EA7357000BCD95B /* volume.png in Resources */,
 				84489F351EB5FC2B003A5C08 /* SA.png in Resources */,
@@ -599,9 +599,10 @@
 				84489F361EB5FC2B003A5C08 /* UK.png in Resources */,
 				84489F331EB5FC2B003A5C08 /* AU.png in Resources */,
 				8484C8C31EA700FD003117CE /* party_animal.png in Resources */,
-				8412DC631EB20ED300CD9BCC /* science_selection.png in Resources */,
 				84B374EE1EB6DF90005CEBFB /* angry_teacher_small.png in Resources */,
+				84B769251EEBEF2300F7FB71 /* science_selection.png in Resources */,
 				84D589451EC6CCB100FF221C /* quizzard.xcworkspace in Resources */,
+				84B769231EEBEF2300F7FB71 /* history_selection.png in Resources */,
 				84678C321EE211C5003A363B /* Play_again.png in Resources */,
 				84DED8F51EE3ADD300CD393B /* Panel.png in Resources */,
 				8412DC651EB20EF600CD9BCC /* Spin.sks in Resources */,
@@ -611,7 +612,6 @@
 				84334F661EA37D8300609913 /* title.png in Resources */,
 				8484C8C91EA70184003117CE /* CharacterSelect.sks in Resources */,
 				84C9FB5C1EB4AFB100B393D1 /* back.png in Resources */,
-				846D100F1EB1E836008BBD36 /* geography_selection.png in Resources */,
 				841D68A91EC6C6CE00414016 /* button_b.png in Resources */,
 				8428D7DC1EA8EA7A00B4141D /* outer_oval.png in Resources */,
 				8428D7DB1EA8EA7A00B4141D /* Science.png in Resources */,
