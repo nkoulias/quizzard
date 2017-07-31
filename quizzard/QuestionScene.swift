@@ -13,9 +13,11 @@ import AVFoundation
 import AVKit
 import Darwin
 import Foundation
+import GameKit
 
 class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
-
+    
+    
     let synth = AVSpeechSynthesizer()
     let correctUtterance = AVSpeechUtterance(string: "Correct")
     let incorrectUtterance = AVSpeechUtterance(string: "Incorrect")
@@ -32,6 +34,9 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
         let decode_topic = defaults.object(forKey: "Topic") as? String
         narrow = setup.filter({$0.topic == decode_topic})
         let qCount = narrow.count
+        if (qCount == 0) {
+            print("Goooooonnnnnne")
+        }
         result = pickQuestion(input: UInt32(qCount))
         showData(input: result, filter: narrow)
         RandomQuestions(input: Int(result), filter: narrow)
@@ -48,9 +53,11 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 synth.stopSpeaking(at: AVSpeechBoundary.word)
                 if (narrow[result].answer == "A") {
                     GameManager.instance.setScore(score: getScore+100)
+                    Leadership.instance.addScoreAndSubmitToGC()
                     synth.speak(correctUtterance)
                     narrow.remove(at: result)
-                    nextQuestion()
+                    
+             //       nextQuestion()
                 }
                 else {
                         synth.stopSpeaking(at: AVSpeechBoundary.word)
@@ -72,6 +79,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 synth.stopSpeaking(at: AVSpeechBoundary.word)
                 if (narrow[result].answer == "B") {
                     GameManager.instance.setScore(score: getScore+100)
+                    Leadership.instance.addScoreAndSubmitToGC()
                     synth.speak(correctUtterance)
                     narrow.remove(at: result)
                     nextQuestion()
@@ -95,6 +103,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 synth.stopSpeaking(at: AVSpeechBoundary.word)
                 if (narrow[result].answer == "C") {
                     GameManager.instance.setScore(score: getScore+100)
+                    Leadership.instance.addScoreAndSubmitToGC()
                     synth.speak(correctUtterance)
                     narrow.remove(at: result)
                     nextQuestion()
@@ -118,6 +127,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 synth.stopSpeaking(at: AVSpeechBoundary.word)
                 if (narrow[result].answer == "D") {
                     GameManager.instance.setScore(score: getScore+100)
+                    Leadership.instance.addScoreAndSubmitToGC()
                     synth.speak(correctUtterance)
                     narrow.remove(at: result)
                     nextQuestion()

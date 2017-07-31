@@ -7,13 +7,12 @@
 //
 
 import SpriteKit
-//import GameplayKit
+//import GamePlayKit
 
 class GameViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if let view = self.view as! SKView? {
             if let scene = MainMenuScene(fileNamed: "MainMenu") {
                 // Set the scale mode to scale to fit the window
@@ -30,7 +29,6 @@ class GameViewController: UIViewController {
             view.showsPhysics = false
         }
     }
-
     override var shouldAutorotate: Bool {
         return true
     }

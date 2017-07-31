@@ -7,7 +7,7 @@
 //
 
 import SpriteKit
-import GameplayKit
+import GameKit
 import AVFoundation
 import AudioToolbox
 
