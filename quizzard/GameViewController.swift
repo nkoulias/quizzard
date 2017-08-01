@@ -7,12 +7,13 @@
 //
 
 import SpriteKit
-//import GamePlayKit
+import GameKit
 
 class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        authenticateLocalPlayer()
         if let view = self.view as! SKView? {
             if let scene = MainMenuScene(fileNamed: "MainMenu") {
                 // Set the scale mode to scale to fit the window
@@ -48,5 +49,17 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    func authenticateLocalPlayer() {
+        let localPlayer = GKLocalPlayer.localPlayer()
+        localPlayer.authenticateHandler = {(viewController, error) -> Void in
+            
+            if (viewController != nil) {
+                self.present(viewController!, animated: true, completion: nil)
+            }
+            else {
+                print((GKLocalPlayer.localPlayer().isAuthenticated))
+            }
+        }
     }
 }

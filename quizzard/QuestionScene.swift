@@ -53,11 +53,9 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 synth.stopSpeaking(at: AVSpeechBoundary.word)
                 if (narrow[result].answer == "A") {
                     GameManager.instance.setScore(score: getScore+100)
-                    Leadership.instance.addScoreAndSubmitToGC()
                     synth.speak(correctUtterance)
                     narrow.remove(at: result)
-                    
-             //       nextQuestion()
+                    nextQuestion()
                 }
                 else {
                         synth.stopSpeaking(at: AVSpeechBoundary.word)
@@ -79,7 +77,7 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 synth.stopSpeaking(at: AVSpeechBoundary.word)
                 if (narrow[result].answer == "B") {
                     GameManager.instance.setScore(score: getScore+100)
-                    Leadership.instance.addScoreAndSubmitToGC()
+            
                     synth.speak(correctUtterance)
                     narrow.remove(at: result)
                     nextQuestion()
@@ -103,7 +101,6 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 synth.stopSpeaking(at: AVSpeechBoundary.word)
                 if (narrow[result].answer == "C") {
                     GameManager.instance.setScore(score: getScore+100)
-                    Leadership.instance.addScoreAndSubmitToGC()
                     synth.speak(correctUtterance)
                     narrow.remove(at: result)
                     nextQuestion()
@@ -127,7 +124,6 @@ class QuestionScene: SKScene, AVSpeechSynthesizerDelegate {
                 synth.stopSpeaking(at: AVSpeechBoundary.word)
                 if (narrow[result].answer == "D") {
                     GameManager.instance.setScore(score: getScore+100)
-                    Leadership.instance.addScoreAndSubmitToGC()
                     synth.speak(correctUtterance)
                     narrow.remove(at: result)
                     nextQuestion()

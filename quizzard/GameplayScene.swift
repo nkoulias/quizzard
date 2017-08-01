@@ -11,7 +11,24 @@ import GameKit
 import AVFoundation
 import AudioToolbox
 
-class GameplayScene: SKScene, SKPhysicsContactDelegate, AVSpeechSynthesizerDelegate {
+func saveHighscore(gameScore: Int) {
+    
+    print("Player has been authenticated.")
+    
+    if GKLocalPlayer.localPlayer().isAuthenticated {
+        
+        let scoreReporter = GKScore(leaderboardIdentifier: "com.leaderboard.quizzard")
+        scoreReporter.value = Int64(gameScore)
+        let scoreArray: [GKScore] = [scoreReporter]
+        
+        GKScore.report(scoreArray, withCompletionHandler: {error -> Void in
+            if error != nil {
+                print("An error has occured: \(String(describing: error))")
+            }
+        })
+    }
+}
+class GameplayScene: SKScene, SKPhysicsContactDelegate, AVSpeechSynthesizerDelegate, GKGameCenterControllerDelegate {
     
     private var player: Player?
     private var maths: Maths?
@@ -48,8 +65,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate, AVSpeechSynthesizerDeleg
         self.addChild(GameManager.instance.main_char)
         self.addChild(GameManager.instance.lives_text)
         self.addChild(GameManager.instance.score_text)
-    //    var abc = GameManager.instance.getQuestions()
-      //  print("Got it")
+        saveHighscore(gameScore: Int(GameManager.instance.getScore()))
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
@@ -64,10 +80,8 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate, AVSpeechSynthesizerDeleg
                 player?.rotatePlayer()
                 
                 //Click back button
-            } else if atPoint(location).name == "back_button" {
-                let play_scene = CharacterSelectScene(fileNamed: "CharacterSelect")
-                play_scene?.scaleMode = .aspectFill
-                self.view?.presentScene(play_scene!, transition: SKTransition.doorsOpenVertical(withDuration: 1))
+            } else if atPoint(location).name == "leaderboard" {
+                showLeader()
             } else if atPoint(location).name == "settings_button" {
                 let play_scene = SettingsScene(fileNamed: "SettingsScene")
                 play_scene?.scaleMode = .aspectFill
@@ -120,5 +134,14 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate, AVSpeechSynthesizerDeleg
             defaults.set(set_topic, forKey: "Topic")
             AudioServicesPlaySystemSound(self.sound)
         }
+    }
+    func showLeader() {
+        let viewControllerVar = self.view?.window?.rootViewController
+        let gKGCViewController = GKGameCenterViewController()
+        gKGCViewController.gameCenterDelegate = (self as GKGameCenterControllerDelegate)
+        viewControllerVar?.present(gKGCViewController, animated: true, completion: nil)
+    }
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
     }
 }
